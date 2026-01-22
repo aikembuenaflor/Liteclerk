@@ -1,0 +1,5 @@
+/* Add custom CSS if needed for this component */
+.corner-glow {
+    /* Adding a basic declaration to satisfy the linter */
+    min-height: 0; 
+}

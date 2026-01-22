@@ -1,0 +1,48 @@
+
+/* 1. Set the dark background for the header area */
+.home-header {
+    background-color: #000000;
+    /* This gradient backdrop subtly mimics the image background */
+    background-image: gradient(180deg, rgba(6, 203, 243, 0.5) 0%, #000000 100%);
+}
+
+/* 2. Marquee Animation for logos */
+@keyframes marquee {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+.marquee {
+    animation: marquee 30s linear infinite;
+}
+
+/* Optional: Pause animation on hover */
+.marquee:hover {
+    animation-play-state: paused;
+}
+
+/* 3. Logo Styling (Default White, Hover Color with Glow) */
+.logo-item {
+    font-size: 1rem; /* Base font size */
+    opacity: 0.8;
+    color: white; /* Default color is white */
+    filter: grayscale(100%); /* Makes the default appearance white/monochrome */
+    transition: all 0.3s ease-in-out;
+    padding: 0 40px; /* Spacing between logos */
+    cursor: pointer;
+}
+
+.logo-item:hover {
+    filter: grayscale(0%); /* Remove grayscale to show original color */
+    opacity: 1;
+    text-shadow: 0 0 10px; /* Slight glow effect */
+}
+
+/* Define specific hover colors/glows (Approximate values) */
+.logo-item.discord:hover { color: #5865F2; text-shadow: 0 0 15px #5865F2; }
+.logo-item.polkadot:hover { color: #E6007A; text-shadow: 0 0 15px #E6007A; }
+.logo-item.github:hover { color: #6e5494; text-shadow: 0 0 15px #6e5494; }
+.logo-item.meta-ai:hover { color: #0080FF; text-shadow: 0 0 15px #0080FF; }
+/* Edge Cloud seems to be a cyan/green gradient already, similar to the H1 gradient */
+.logo-item.edge-cloud:hover { color: #00FFFF; text-shadow: 0 0 15px #00FFFF; }
+

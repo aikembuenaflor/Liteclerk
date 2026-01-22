@@ -1,0 +1,30 @@
+<nav class="fixed top-0 w-full z-50 px-6 py-6">
+    <div class="max-w-7xl mx-auto flex items-center justify-between glass-card rounded-full px-8 py-4 neon-border-luminous">
+        <!-- Logo/Brand Section -->
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-gradient-neon rounded-xl flex items-center justify-center shadow-[0_0_15px_#00F2FE]">
+                <!-- Using a span here as you had in your original code -->
+                <span class="material-symbols-outlined text-black font-bold">auto_graph</span>
+            </div>
+            <span class="font-display font-extrabold text-2xl tracking-tighter text-white">LITECLERK</span>
+        </div>
+        
+        <!-- Navigation Links (Hidden on mobile by default) -->
+        <div class="hidden md:flex items-center gap-10 text-sm font-bold tracking-wide">
+            <!-- Using routerLink for Angular navigation -->
+            <a routerLink="/" class="hover:text-primary transition-all text-slate-300">HOME</a>
+            <a routerLink="/products" class="hover:text-primary transition-all text-slate-300">PRODUCTS</a>
+            <a routerLink="/about" class="hover:text-primary transition-all text-slate-300">ABOUT US</a>
+            <a routerLink="/partners" class="hover:text-primary transition-all text-slate-300">PARTNERS</a>
+            <a routerLink="/contact" class="hover:text-primary transition-all text-slate-300">CONTACT US</a>
+        </div>
+
+        <!-- Login and Demo Button -->
+        <div class="flex items-center gap-6">
+            <a class="hidden sm:block text-sm font-bold hover:text-primary transition-colors text-slate-200" routerLink="/login">LOGIN</a>
+            <button class="bg-gradient-neon text-black font-extrabold px-6 py-2.5 rounded-full text-sm shadow-[0_0_20px_rgba(0,242,254,0.5)] hover:scale-105 transition-transform">
+                BOOK DEMO
+            </button>
+        </div>
+    </div>
+</nav>
