@@ -6,31 +6,33 @@ import { loadFull } from "tsparticles";
 @Component({
   selector: 'app-background',
   standalone: true,
-  imports: [NgxParticlesModule], // Required for <ngx-particles> to work
+  imports: [NgxParticlesModule], 
   template: `
-    <ngx-particles
-      [id]="'tsparticles'"
-      [options]="particlesOptions"
-      [particlesInit]="particlesInit"
-      style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;">
-    </ngx-particles>
+    <!-- The @defer block ensures this only runs in the browser -->
+    @defer (on timer(0)) {
+      <ngx-particles
+        [id]="'tsparticles'"
+        [options]="particlesOptions"
+        [particlesInit]="particlesInit"
+        style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;">
+      </ngx-particles>
+    }
   `
 })
 export class BackgroundComponent {
-  // 2026 Futuristic Cyber Theme (Blue & Green)
   public particlesOptions = {
     background: { color: { value: "#000814" } },
     fpsLimit: 120,
     interactivity: {
       events: {
-        onHover: { enable: true, mode: "grab" } // Interactive "web" effect on hover
+        onHover: { enable: true, mode: "grab" }
       },
       modes: {
         grab: { distance: 140, links: { opacity: 1 } }
       }
     },
     particles: {
-      color: { value: ["#00f5d4", "#00b4d8"] }, // Neon Green & Cyber Blue
+      color: { value: ["#00f5d4", "#00b4d8"] },
       links: {
         color: "#00b4d8",
         distance: 150,
@@ -49,7 +51,6 @@ export class BackgroundComponent {
     }
   };
 
-  // This method initializes the particles engine
   async particlesInit(engine: Engine): Promise<void> {
     await loadFull(engine);
   }
