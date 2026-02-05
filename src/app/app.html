@@ -1,8 +1,13 @@
 <app-background></app-background>
-
-<!-- Place the navbar here, above the content that changes via routing -->
 <app-navbar></app-navbar>
 
-<main>
-    <router-outlet></router-outlet>
-</main>
+<!-- Use @defer for SSR safety and [Input] binding for the function reference -->
+@defer {
+  <ngx-particles
+    [id]="'tsparticles'"
+    [options]="particlesOptions"
+    [particlesInit]="particlesInit"> <!-- Changed from () to [] and removed ($event) -->
+  </ngx-particles>
+}
+
+<router-outlet></router-outlet>
