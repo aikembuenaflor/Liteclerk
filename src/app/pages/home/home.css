@@ -197,5 +197,16 @@
   color: #ffffff !important;
 }
 
+.logo-style {
+  /* This makes the colored SVG look like a light gray silhouette */
+  filter: grayscale(100%) brightness(1.5) opacity(0.5);
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.logo-style:hover {
+  /* This restores original colors and adds your glow */
+  filter: grayscale(0%) brightness(1) opacity(1) drop-shadow(0 0 20px rgba(0, 255, 156, 0.6));
+}
 
 
