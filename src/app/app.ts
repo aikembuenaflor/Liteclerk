@@ -6,16 +6,18 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { NgxParticlesModule } from '@tsparticles/angular';
 import { MoveDirection, OutMode, Engine } from "@tsparticles/engine";
 import { loadFull } from "tsparticles";
+import { FooterComponent } from "./footer/footer";
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
-    NgxParticlesModule, 
-    RouterOutlet,        
-    BackgroundComponent, 
-    NavbarComponent      
-  ],
+    NgxParticlesModule,
+    RouterOutlet,
+    BackgroundComponent,
+    NavbarComponent,
+    FooterComponent
+],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })
