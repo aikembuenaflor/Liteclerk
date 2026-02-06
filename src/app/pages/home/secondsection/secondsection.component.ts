@@ -1,52 +1,71 @@
-import { Component, AfterViewInit, Inject, PLATFORM_ID, ElementRef } from '@angular/core';
+import { 
+  Component, 
+  OnInit, 
+  OnDestroy, 
+  Inject, 
+  PLATFORM_ID, 
+  ChangeDetectorRef // Required for manual UI updates
+} from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 
 @Component({
-  selector: 'app-home-secondsection', // Renamed selector to match app-home-secondsection in HTML
+  selector: 'app-home-secondsection',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './secondsection.component.html',
   styleUrls: ['./secondsection.component.css']
 })
-export class SecondsectionComponent implements AfterViewInit {
-  private isBrowser: boolean;
+export class SecondsectionComponent implements OnInit, OnDestroy {
+  imagesA: string[] = [
+    '/Images/demo-store-1.png', '/Images/demo-store-2.png', '/Images/demo-store-3.png',
+    '/Images/demo-store-4.png', '/Images/demo-store-5.png', '/Images/demo-store-6.png',
+    '/Images/demo-store-7.png', '/Images/demo-store-8.png', '/Images/demo-store-9.png',
+    '/Images/demo-store-10.png'
+  ];
+
+  imagesB: string[] = [
+    '/Images/demo-store-11.png', '/Images/demo-store-12.png', '/Images/demo-store-13.png',
+    '/Images/demo-store-14.png', '/Images/demo-store-15.png', '/Images/demo-store-16.png',
+    '/Images/demo-store-17.png', '/Images/demo-store-18.png', '/Images/demo-store-19.png',
+    '/Images/demo-store-20.png'
+  ];
+
+  currentIndexA = 0;
+  currentIndexB = 0;
+  private timerA: any;
+  private timerB: any;
+  isBrowser: boolean;
 
   constructor(
-    @Inject(PLATFORM_ID) platformId: Object,
-    private el: ElementRef // Inject ElementRef to safely access the component's host element
+    @Inject(PLATFORM_ID) private platformId: Object,
+    private cdr: ChangeDetectorRef // Inject Change Detection
   ) {
     this.isBrowser = isPlatformBrowser(platformId);
   }
 
-  ngAfterViewInit(): void {
-    // Only run this code if we are in a web browser environment
+  ngOnInit(): void {
     if (this.isBrowser) {
-      // Use ElementRef to find elements safely within THIS component only
-      const cardA = this.el.nativeElement.querySelector('.card-a-wrapper');
-      const cardB = this.el.nativeElement.querySelector('.card-b-wrapper');
-
-      if (cardA) this.initSlider(cardA, 2000);
-      if (cardB) this.initSlider(cardB, 2000);
+      this.startSliders();
     }
   }
 
-  // Function to handle the image sliding logic using pure JS/TS
-  private initSlider(cardSelector: HTMLElement, interval: number): void {
-    const slides = cardSelector.querySelectorAll('.slider-img');
-    if (slides.length === 0) return;
-    
-    let current = 0;
-    setInterval(() => {
-      // Hide the current slide
-      slides[current].classList.remove('opacity-100', 'scale-100');
-      slides[current].classList.add('opacity-0', 'scale-105');
-      
-      // Move to the next slide
-      current = (current + 1) % slides.length;
-      
-      // Show the next slide
-      slides[current].classList.remove('opacity-0', 'scale-105');
-      slides[current].classList.add('opacity-100', 'scale-100');
-    }, interval);
+  startSliders(): void {
+    // Timer for Slider A
+    this.timerA = setInterval(() => {
+      this.currentIndexA = (this.currentIndexA + 1) % this.imagesA.length;
+      this.cdr.detectChanges(); // Force update view
+    }, 1500);
+
+    // Timer for Slider B
+    this.timerB = setInterval(() => {
+      this.currentIndexB = (this.currentIndexB + 1) % this.imagesB.length;
+      this.cdr.detectChanges(); // Force update view
+    }, 2000);
+  }
+
+  ngOnDestroy(): void {
+    // Clear timers to prevent memory leaks
+    if (this.timerA) clearInterval(this.timerA);
+    if (this.timerB) clearInterval(this.timerB);
   }
 }
