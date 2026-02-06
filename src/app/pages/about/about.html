@@ -1,55 +1,320 @@
-<div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
-  <div class="absolute top-[-20%] left-[-10%] w-[60%] h-[60%] light-leak-blue rounded-full"></div>
-  <div class="absolute bottom-[-20%] right-[-10%] w-[60%] h-[60%] light-leak-green rounded-full"></div>
-  <div class="absolute inset-0 cyber-grid opacity-30 [mask-image:radial-gradient(ellipse_at_center,black,transparent_90%)]"></div>
-</div>
+<main class="relative plexus-bg min-h-screen">
+  <div class="hero-mesh"></div>
+<!-- New Neon Glow Element -->
+  <div class="corner-glow"></div>
 
-<div class="relative z-10 flex flex-col min-h-screen">
-  <header class="flex items-center justify-between border-b border-white/5 px-6 py-4 lg:px-20 backdrop-blur-xl sticky top-0 z-50">
-    <div class="flex items-center gap-3">
-      <div class="size-9 text-primary filter drop-shadow-[0_0_8px_rgba(0,242,255,0.6)]">
-        <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-          <path d="M42.1739 20.1739L27.8261 5.82609C29.1366 7.13663 28.3989 10.1876 26.2002 13.7654C24.8538 15.9564 22.9595 18.3449 20.6522 20.6522C18.3449 22.9595 15.9564 24.8538 13.7654 26.2002C10.1876 28.3989 7.13663 29.1366 5.82609 27.8261L20.1739 42.1739C21.4845 43.4845 24.5355 42.7467 28.1133 40.548C30.3042 39.2016 32.6927 37.3073 35 35C37.3073 32.6927 39.2016 30.3042 40.548 28.1133C42.7467 24.5355 43.4845 21.4845 42.1739 20.1739Z" fill="currentColor"></path>
-        </svg>
+  <!-- Optional: Add a second primary glow for the right side for balance -->
+  <div class="absolute -bottom-24 -right-24 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] pointer-events-none"></div>
+    <div class="absolute top left w-[500px] h-[500px] bg-[#00f2c3]/30 rounded-full blur-[120px]"></div>
+    <div class="absolute middle -right-40 w-[500px] h-[500px] bg-[#00d2ff]/30 rounded-full blur-[120px]"></div>
+
+
+  <!-- Hero Section -->
+  <section class="pt-48 pb-24 px-6 text-center">
+    <div class="max-w-4xl mx-auto">
+      <span class="inline-block px-4 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-medium tracking-widest uppercase mb-8">
+Our Work in Action     </span>
+      <h1 class="text-5xl md:text-7xl text-white font-extrabold mb-8 leading-tight">
+        Helping Businesses <br/>
+        <span class="cyber-gradient-text">Simplify Operations</span>
+      </h1>
+      <p class="text-lg text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+        Liteclerk Corporation was founded with a simple goal: to help businesses eliminate operational complexity through reliable and easy-to-use software solutions.
+      </p>
       </div>
-      <h2 class="text-white text-2xl font-black tracking-tighter">LiteClerk</h2>
-    </div>
-    <nav class="hidden md:flex items-center gap-10">
-      <a class="text-gray-400 hover:text-primary transition-colors text-sm font-semibold tracking-wide uppercase" href="#">Solutions</a>
-      <a class="text-white text-sm font-bold border-b-2 border-primary pb-1 tracking-wide uppercase" href="#">About Us</a>
-      <a class="text-gray-400 hover:text-primary transition-colors text-sm font-semibold tracking-wide uppercase" href="#">Services</a>
-      <a class="text-gray-400 hover:text-primary transition-colors text-sm font-semibold tracking-wide uppercase" href="#">Contact</a>
-    </nav>
-    <div class="flex items-center gap-4">
-      <button class="cyber-button text-black text-xs font-black uppercase px-6 py-2.5 rounded-full">Book Demo</button>
-    </div>
-  </header>
+  </section>
 
-  <main class="flex-1 flex flex-col items-center">
-    <section class="w-full max-w-[1200px] px-6 py-20 lg:py-32">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        <div class="flex flex-col gap-8 text-left animate-reveal stagger-1">
-          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/30 text-primary text-[10px] font-black uppercase tracking-[0.2em] w-fit">
-            <span class="relative flex h-2 w-2">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-            </span>
-            The Digital Frontier
+  
+
+  <!-- Mission & Vision Content -->
+  <section class="py-32 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid lg:grid-cols-2 gap-8">
+        <!-- Image Card -->
+        <div class="relative group rounded-3xl overflow-hidden glass-card min-h-[500px] floating-anim">
+          <img alt="Team working" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" src="https://images.unsplash.com"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-[#020617] via-transparent to-transparent"></div>
+          <div class="absolute bottom-10 left-10 right-10">
+            <h3 class="text-3xl text-white font-bold mb-4">Smart solutions for businesses</h3>
+            <p class="text-slate-300">Liteclerk continues to innovate to shape the future of intelligent and connected business operations.</p>
           </div>
-          <h1 class="text-white text-6xl lg:text-8xl font-black leading-[0.95] tracking-tighter">
-            <span class="hero-gradient-text block mb-2">Empowering</span> Smarter Business
-          </h1>
-          <p class="text-gray-400 text-xl leading-relaxed max-w-xl font-medium opacity-80">
-            Liteclerk is a technology-driven powerhouse dedicated to optimizing operational efficiency through high-contrast innovation and futuristic architecture.
-          </p>
-          <div class="flex flex-wrap gap-4 pt-4">
-            <button (click)="onDemoClick()" class="cyber-button text-black px-10 py-5 rounded-full font-black uppercase tracking-widest flex items-center gap-3">
-              Schedule A Free Demo
-              <span class="material-symbols-outlined font-black">bolt</span>
-            </button>
+        </div>
+
+        <!-- Text Cards -->
+        <div class="flex flex-col gap-8">
+          <div class="flex-1 glass-card p-10 rounded-3xl relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl -mr-16 -mt-16"></div>
+            <span class="material-icons-outlined text-primary text-4xl mb-6">rocket_launch</span>
+            <h3 class="text-2xl font-bold mb-4 text-white">Our Mission</h3>
+            <p class="text-slate-400 leading-relaxed">
+To become a leading provider of integrated business software solutions in the Philippines and beyond by combining POS, cloud accounting, AI insights, and emerging technologies like Web3 into one seamless platform.            </p>
+          </div>
+
+          <div class="flex-1 bg-gradient-to-br from-[#00f2c3] to-[#00d2ff] p-10 rounded-3xl relative overflow-hidden text-black neon-glow-primary">
+            <div class="absolute bottom-0 right-0 opacity-20 transform translate-x-10 translate-y-10">
+              <span class="material-icons-outlined text-[180px]">visibility</span>
+            </div>
+            <span class="material-icons-outlined text-4xl mb-6">visibility</span>
+            <h3 class="text-2xl font-bold mb-4">Our Vision</h3>
+            <p class="font-medium leading-relaxed opacity-90">
+To deliver simple, reliable, and intelligent POS and business software solutions that help companies operate efficiently and grow sustainably.            </p>
           </div>
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
+
+<section class="py-32 px-6 bg-white/5 relative overflow-hidden mx-auto">
+<div class="max-w-7xl mx-20 relative z-10">
+<div class="grid lg:grid-cols-2 gap-20 items-center">
+<div>
+<span class="text-secondary font-medium text-glow-blue tracking-widest text-sm uppercase mb-4 block">Our Roots</span>
+<h2 class="text-4xl md:text-5xl font-extrabold text-white mb-8">Our Background</h2>
+<div class="space-y-6 text-slate-300 text-lg leading-relaxed">
+<p>
+                                Liteclerk Corporation is a 100% Filipino-owned software company. We specialize in developing software for POS (Point-Of-Sale), inventory management, and financial accounting.
+                            </p>
+<p>
+                                Starting in 2008 with a small office in Cebu, we have expanded our reach nationwide. Our journey is defined by constant adaptation to the changing technological landscape, from desktop applications to full cloud-native solutions.
+                            </p>
 </div>
+</div>
+<div class="relative mx-auto">
+<div class="absolute -top-10 -left-10 w-40 h-40 bg-accent-blue/20 rounded-full blur-3xl"></div>
+<div class="glass-card p-12 rounded-3xl border-primary/20 text-center relative z-10">
+<span class="text-8xl font-black cyber-gradient-text">15+</span>
+<p class="text-xl font-bold mt-4 tracking-wide text-white">Years of Industry Excellence</p>
+<div class="mt-8 flex justify-center gap-4">
+<div class="w-12 h-1 bg-primary rounded-full"></div>
+<div class="w-4 h-1 bg-primary/30 rounded-full"></div>
+<div class="w-4 h-1 bg-primary/30 rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="py-32 px-6">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-20">
+<h2 class="text-3xl md:text-5xl font-extrabold text-center text-white mb-6">
+      Our Growth <span class="text-gradient drop-shadow-[0_0_15px_rgba(0,242,255,0.4)]">and Evolution</span>
+    </h2>
+<p class="text-slate-400">Continuous innovation to match your business pace.</p>
+</div>
+<div class="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
+<div class="glass-card p-8 rounded-2xl hover:border-primary/50 transition-all duration-300 group">
+<span class="material-icons-outlined text-primary text-3xl mb-6 group-hover:scale-110 transition-transform">desktop_windows</span>
+<h4 class="font-bold mb-3 text-secondary">Desktop POS</h4>
+<p class="text-xs text-slate-400 leading-relaxed">Solid performance for stable retail operations.</p>
+</div>
+<div class="glass-card p-8 rounded-2xl hover:border-primary/50 transition-all duration-300 group">
+<span class="material-icons-outlined text-primary text-3xl mb-6 group-hover:scale-110 transition-transform">smartphone</span>
+<h4 class="font-bold mb-3 text-secondary">Mobile POS</h4>
+<p class="text-xs text-slate-400 leading-relaxed">Flexibility for on-the-go transactions.</p>
+</div>
+<div class="glass-card p-8 rounded-2xl hover:border-primary/50 transition-all duration-300 group">
+<span class="material-icons-outlined text-primary text-3xl mb-6 group-hover:scale-110 transition-transform">cloud_queue</span>
+<h4 class="font-bold mb-3 text-secondary">Cloud Accounting</h4>
+<p class="text-xs text-slate-400 leading-relaxed">Real-time financials from anywhere.</p>
+</div>
+<div class="glass-card p-8 rounded-2xl hover:border-primary/50 transition-all duration-300 group">
+<span class="material-icons-outlined text-primary text-3xl mb-6 group-hover:scale-110 transition-transform">insights</span>
+<h4 class="font-bold mb-3 text-secondary">AI Insights</h4>
+<p class="text-xs text-slate-400 leading-relaxed">Smart analytics to drive decisions.</p>
+</div>
+<div class="glass-card p-8 rounded-2xl hover:border-primary/50 transition-all duration-300 group">
+<span class="material-icons-outlined text-primary text-3xl mb-6 group-hover:scale-110 transition-transform">hub</span>
+<h4 class="font-bold mb-3 text-secondary">SYSPRO ERP</h4>
+<p class="text-xs text-slate-400 leading-relaxed">Enterprise-grade resource planning.</p>
+</div>
+</div>
+</div>
+</section>
+  
+
+
+<!-- FACTS IN NUMBERS – COMPACT -->
+<section class="w-full py-20 mb bg-transparent relative overflow-hidden">
+
+
+  <!-- Soft glow -->
+  <div class="absolute inset-0 pointer-events-none"></div>
+
+
+  <div class="relative max-w-6xl mx-auto px-6">
+
+
+    <!-- Header -->
+    <p class="font-sans text-secondary text-center text-xs tracking-[0.3em] uppercase mb-4 block cyber-glow">
+      A Few More Facts 
+    <p>
+
+    <h2 class="text-3xl md:text-5xl font-extrabold text-center text-white mb-10">
+      About Us <span class="text-gradient drop-shadow-[0_0_15px_rgba(0,242,255,0.4)]">in Numbers</span>
+    </h2>
+
+
+    <!-- Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+  <!-- Card 1: Everything inside reacts to 'group-hover' -->
+  <div class="rounded-2xl p-7 text-center
+                  transition-all duration-500 hover:-translate-y-1
+                  hover:shadow-[0_0_30px_rgba(0,242,254,0.4)]">
+    
+    
+    <!-- Content inside the card -->
+    <div class="relative z-10">
+      <div class="text-4xl font-extrabold text-white mb-2">
+        510 <span class="text-secondary">SME</span>
+      </div>
+      <p class="text-slate-300 text-sm leading-relaxed">
+        Total MSME customers using Liteclerk products and services
+      </p>
+    </div>
+  </div>
+
+
+      <!-- Card 2 -->
+      <div class="rounded-2xl p-7 text-center
+                  transition-all duration-500 hover:-translate-y-1
+                  hover:shadow-[0_0_30px_rgba(0,242,254,0.4)]">
+        <div class="text-4xl font-extrabold text-white mb-2">
+          10,190 <span class="text-secondary">USERS</span>
+        </div>
+        <p class="text-slate-300 text-sm leading-relaxed">
+          Total issued user licenses across all Liteclerk software
+        </p>
+      </div>
+
+
+      <!-- Card 3 -->
+      <div class="rounded-2xl p-7 text-center
+                  transition-all duration-500 hover:-translate-y-1
+                  hover:shadow-[0_0_30px_rgba(0,242,254,0.4)]">
+        <div class="text-4xl font-extrabold text-white mb-2">
+          10 <span class="text-secondary">TB</span>
+        </div>
+        <p class="text-slate-300 text-sm leading-relaxed">
+          Total cloud-managed database storage size
+        </p>
+      </div>
+
+
+    </div>
+  </div>
+  </section>
+
+  <!-- section 3 end - a few more facts about us in -->
+
+
+
+  <!-- Section 5: Why Choose Us -->
+<section class="glass-card bg-accent-blue mb-16 rounded-3xl py-20 mx-20 bg-grid-pattern overflow-hidden">
+  <!-- Animated Streaks Background -->
+  <div class="streak left-1/4" style="animation-delay: 0s;"></div>
+  <div class="streak left-2/4" style="animation-delay: 3s;"></div>
+  <div class="streak left-3/4" style="animation-delay: 7s;"></div>
+
+  <div class="max-w-7xl mx-auto px-6 relative z-10">
+    <div class="text-center mb-20">
+      <span class="font-sans text-se text-xs tracking-[0.3em] text-secondary uppercase mb-4 block cyber-glow">
+        Proven Results
+      </span>
+      <h2 class="font-sans text-3xl md:text-5xl font-black mb-6 tracking-tight text-slate-300">
+        Why <span class="text-gradient drop-shadow-[0_0_15px_rgba(0,242,255,0.4)]">Choose Us</span>
+      </h2>
+      <p class="max-w-2xl mx-auto text-lg text-slate-400 font-light leading-relaxed">
+        Our proven work delivers reliable, innovative, and scalable solutions that help businesses operate smarter, faster, and with confidence.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Card 1 -->
+      <div class="group flex flex-col items-center text-center p-8 transition-all duration-500 hover:-translate-y-2">
+        <div class="relative mb-8">
+          <div class="absolute inset-0 bg-primary/20 blur-2xl rounded-full scale-0 group-hover:scale-150 transition-transform duration-700"></div>
+          <div class="w-24 h-24 rounded-full flex items-center justify-center glass-card neon-border-glow relative z-10 border-primary/30 group-hover:border-primary transition-colors duration-500">
+            <span class="material-symbols-outlined text-4xl text-primary cyber-glow">handshake</span>
+          </div>
+        </div>
+        <h3 class="text-xl font-bold mb-4 tracking-wider uppercase group-hover:text-primary transition-colors text-slate-200">Established</h3>
+        <p class="text-slate-400 font-light text-sm leading-relaxed">
+          We've been in the industry for more than a decade. Trusted by over a thousand users worldwide.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="group flex flex-col items-center text-center p-8 transition-all duration-500 hover:-translate-y-2">
+        <div class="relative mb-8">
+          <div class="absolute inset-0 bg-secondary/20 blur-2xl rounded-full scale-0 group-hover:scale-150 transition-transform duration-700"></div>
+          <div class="w-24 h-24 rounded-full flex items-center justify-center glass-card neon-border-glow relative z-10 border-secondary/30 group-hover:border-secondary transition-colors duration-500">
+            <span class="material-symbols-outlined text-4xl text-secondary drop-shadow-[0_0_8px_rgba(0,255,157,0.8)]">verified_user</span>
+          </div>
+        </div>
+        <h3 class="text-xl font-bold mb-4 tracking-wider uppercase group-hover:text-secondary transition-colors text-slate-200">Reliable</h3>
+        <p class="text-slate-400 font-light text-sm leading-relaxed">
+          We have our own software development team and technical support that can guarantee resolution within 24 hrs.
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="group flex flex-col items-center text-center p-8 transition-all duration-500 hover:-translate-y-2">
+        <div class="relative mb-8">
+          <div class="absolute inset-0 bg-primary/20 blur-2xl rounded-full scale-0 group-hover:scale-150 transition-transform duration-700"></div>
+          <div class="w-24 h-24 rounded-full flex items-center justify-center glass-card neon-border-glow relative z-10 border-primary/30 group-hover:border-primary transition-colors duration-500">
+            <span class="material-symbols-outlined text-4xl text-primary cyber-glow">ads_click</span>
+          </div>
+        </div>
+        <h3 class="text-xl font-bold mb-4 tracking-wider uppercase group-hover:text-primary transition-colors text-slate-200">Accessible</h3>
+        <p class="text-slate-400 font-light text-sm leading-relaxed">
+          We are locally located and have direct contact and immediate actions for all our corporate clients.
+        </p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="group flex flex-col items-center text-center p-8 transition-all duration-500 hover:-translate-y-2">
+        <div class="relative mb-8">
+          <div class="absolute inset-0 bg-secondary/20 blur-2xl rounded-full scale-0 group-hover:scale-150 transition-transform duration-700"></div>
+          <div class="w-24 h-24 rounded-full flex items-center justify-center glass-card neon-border-glow relative z-10 border-secondary/30 group-hover:border-secondary transition-colors duration-500">
+            <span class="material-symbols-outlined text-4xl text-secondary drop-shadow-[0_0_8px_rgba(0,255,157,0.8)]">hub</span>
+          </div>
+        </div>
+        <h3 class="text-xl font-bold mb-4 tracking-wider uppercase group-hover:text-secondary transition-colors text-slate-200">Connected</h3>
+        <p class="text-slate-400 font-light text-sm leading-relaxed">
+          We have our own CRM system to keep track of calls and supports through community driven app integration.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action Section from Image -->
+<section class="relative py-20 px-6">
+  <!-- Optional: background effects from previous steps (remove if not needed) -->
+  <div class="absolute bottom w-[500px] h-[500px] bg-primary/5 rounded-3xl blur-[120px] pointer-events-none"></div>
+    <div class="absolute top w-[500px] h-[500px] bg-[#00f2c3]/30 rounded-full blur-[120px]"></div>
+    <div class="absolute bottom -right-30 w-[500px] h-[500px] bg-[#00d2ff]/30 rounded-full blur-[120px]"></div>
+
+
+  <div class="relative z-10 max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">
+      Join 500+ users <br/>
+      <span class="text-gradient-lite">already using Liteclerk</span>
+    </h2>
+    <p class="text-slate-400 mb-10 max-w-2xl mx-auto">
+      Discover smarter POS and accounting tools that make operations easier, improve accuracy, and help your business grow.
+    </p>
+    <div class="flex justify-center space-x-6">
+      <button class="btn-primary">GET STARTED NOW</button>
+      <button class="btn-secondary">CONTACT SALES</button>
+    </div>
+  </div>
+</section>
+
+</main>
+
+
