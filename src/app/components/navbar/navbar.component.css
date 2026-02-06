@@ -1,28 +1,21 @@
-/* Note: @import "tailwindcss" is not typically needed here as it should be in your global styles.css */
-
 .glass-card {
-  /* Applying Tailwind utilities via CSS custom classes for the effect */
-  background: rgba(255, 255, 255, 0.05); /* bg-white/5 */
-  backdrop-filter: blur(20px);            /* backdrop-blur-[20px] */
-  border: 1px solid rgba(255, 255, 255, 0.2); /* border border-white/20 */
-  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.8); /* shadow-[0_8px_32px_0_rgba(0,0,0,0.8)] */
+  background: rgba(10, 10, 10, 0.6); /* Darker for better contrast */
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Ensure your tailwind.config.js has the 'primary', 'success', and 'gradient-neon' definitions
-   for the border-luminous effect below to work correctly */
-
-.neon-border-luminous {
-  position: relative;
-}
 .neon-border-luminous::after {
   content: "";
   position: absolute;
-  inset: -1px; /* -inset-[1px] */
-  background-image: linear-gradient(to right, var(--primary), transparent, var(--success)); /* bg-gradient-to-r from-primary via-transparent to-success */
+  inset: -1px;
+  background: linear-gradient(90deg, #00f2fe, transparent, #00f2fe);
   border-radius: inherit;
   z-index: -1;
-  opacity: 0.7;
+  opacity: 0.4;
 }
 
-/* These styles rely on your tailwind.config.js having been set up earlier */
-/* .bg-gradient-neon, .font-display, .text-primary, etc. */
+/* Helper for the icon if not in global */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
