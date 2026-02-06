@@ -42,7 +42,7 @@ export class BackgroundComponent {
       },
       move: {
         enable: true,
-        speed: 2,
+        speed: 0.5,
         direction: MoveDirection.none,
         outModes: { default: OutMode.out }
       },

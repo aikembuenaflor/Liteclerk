@@ -1,11 +1,16 @@
 @import "tailwindcss";
 
-@tailwind utilities;
+@theme {
+  --color-primary: #00f2c3;
+  --color-secondary: #00d2ff;
+  --color-background-dark: #020617;
+  --font-sans: "Poppins", sans-serif;
 
+  /* Custom Marquee Animation */
+  --animate-marquee: marquee 25s linear infinite;
 
-.glass-card {
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
 }
-
