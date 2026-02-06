@@ -14,3 +14,58 @@
     to { transform: translateX(-50%); }
   }
 }
+
+/* Ensure smooth transitions for all relevant properties */
+.product-card {
+    /* Initial state color (assuming a dark background for the 'glass' effect) */
+    background-color: rgba(255, 255, 255, 0.05); 
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 1. When hovered, the cards will turn to gradient blue and green */
+.product-card:hover {
+    background: linear-gradient(to bottom right, #00d2ff, #00f2c3); /* blue-500 to emerald-500 equivalent */
+    /* Adding a slight lift and stronger shadow for depth */
+    transform: translateY(-8px); 
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    border-color: transparent;
+}
+
+/* 2. Texts will turn to white (using cascading colors) */
+/* Transition applied to text elements for smoothness */
+.product-card p, 
+.product-card h3 {
+    transition: color 0.3s ease-in-out;
+}
+
+.product-card:hover p,
+.product-card:hover h3 {
+    color: #fff !important; /* Forces all text inside the hovered card to white */
+}
+
+/* Adjusting opacity for secondary text to match the Tailwind implementation */
+.product-card:hover p.text-slate-400,
+.product-card:hover p.text-slate-300 {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* 3. Button for read more will turn to black with white text */
+.product-card .glass-btn.gradient-btn {
+    transition: all 0.3s ease-in-out;
+    /* Assuming an initial style for the button, e.g., a border/glass effect */
+    background-color: transparent; 
+    color: inherit;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.product-card:hover .glass-btn.gradient-btn {
+    background-color: #000; /* Black background */
+    color: #fff;           /* White text */
+    border-color: transparent;
+}
+
+
+

@@ -48,3 +48,154 @@
 .hero-section {
   @apply relative overflow-hidden;
 }
+
+.silver-text {
+  /* This uses a light metallic gray/silver hex */
+  color: #cbd5e1 !important; 
+}
+
+@reference "../../../styles.css";
+
+.cyber-glow {
+    text-shadow: 0 0 10px rgba(0, 242, 255, 0.5), 0 0 20px rgba(0, 242, 255, 0.2);
+}
+
+.neon-border-glow {
+    box-shadow: 0 0 15px rgba(0, 242, 255, 0.3), inset 0 0 15px rgba(0, 242, 255, 0.1);
+}
+
+.glass-card {
+    @apply bg-white/[0.03] backdrop-blur-xl border border-white/10;
+}
+
+
+.streak {
+    @apply absolute w-[2px] h-[100px] opacity-20 pointer-events-none;
+    background: linear-gradient(to bottom, transparent, #00f2ff, transparent);
+    animation: move-down 10s linear infinite;
+}
+
+@keyframes move-down {
+    0% { transform: translateY(-100vh); }
+    100% { transform: translateY(100vh); }
+}
+
+.text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
+}
+
+@reference "../../../styles.css";
+
+.glass-card {
+    /* Updated background with higher opacity for the form */
+    background: rgba(15, 15, 20, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+}
+
+.text-glow-blue {
+    text-shadow: 0 0 8px rgba(0, 242, 255, 0.6);
+}
+
+/* Reusing your gradient button definition */
+.gradient-button {
+    @apply bg-gradient-to-r from-primary to-secondary font-bold px-8 py-4 rounded-full transition-all duration-300;
+    box-shadow: 0 0 15px rgba(0, 242, 255, 0.3);
+}
+
+.gradient-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 25px rgba(0, 242, 255, 0.5);
+}
+
+/* Custom styles for form inputs */
+.form-input {
+    @apply w-full bg-black/40 rounded-xl px-4 py-3 text-white placeholder-slate-600 focus:ring-0;
+    /* Custom border color with focus effects */
+    border: 1px solid rgba(0, 242, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.form-input:focus {
+    border-color: var(--color-primary); /* Uses your theme variable */
+    box-shadow: 0 0 10px rgba(0, 242, 255, 0.4);
+    outline: none;
+}
+
+/* Styles for the main action section */
+
+.text-gradient-lite {
+  /* This creates the teal/green gradient text effect seen in the image */
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
+}
+
+.btn-primary {
+  /* "GET STARTED NOW" button styling */
+  @apply bg-gradient-to-r from-primary to-secondary text-slate-900 font-bold px-8 py-4 rounded-full 
+         transition-all duration-300 hover:shadow-[0_0_25px_rgba(0,242,195,0.6)] hover:scale-105 active:scale-95;
+}
+
+.btn-secondary {
+  /* "CONTACT SALES" button styling */
+  @apply bg-white/5 border border-white/20 text-white font-bold px-8 py-4 rounded-full 
+         transition-all duration-300 hover:bg-white/10 hover:border-primary/50 hover:shadow-[0_0_20px_rgba(0,242,195,0.2)];
+}
+
+.gradient-btn {
+  background: linear-gradient(135deg, #00f2c3, #00d2ff);
+  border: none;
+  color: white; /* Ensures text is readable against the bright gradient */
+}
+
+/* Ensure the background image is removed when the parent is hovered */
+.group:hover .gradient-btn {
+  background-image: none !important;
+  
+}
+
+/* The Card Base */
+.product-card {
+  background: rgba(255, 255, 255, 0.05); /* Standard glass effect */
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+/* Hover Gradient Layer */
+.product-card::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(135deg, #03cba3, #08bae2);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  z-index: -1; /* Keeps content on top */
+}
+
+.product-card:hover::after {
+  opacity: 1;
+}
+
+/* Force all text elements to black on card hover */
+.product-card:hover p, 
+.product-card:hover h3, 
+.product-card:hover span {
+  color: #000000 !important;
+  text-shadow: none !important; /* Removes the blue glow on hover */
+}
+
+/* Specific override for the 'Liteclerk' uppercase text */
+.product-card:hover .text-glow-blue {
+  color: #000000 !important;
+}
+
+/* Ensure the button text remains white for contrast against its black background */
+.product-card:hover .gradient-btn {
+  background: #000000 !important;
+  color: #ffffff !important;
+}
+
+
+
