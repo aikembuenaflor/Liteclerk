@@ -67,5 +67,17 @@
     border-color: transparent;
 }
 
+/* Target the main content wrapper right above where the space appears */
+.max-w-6xl.mx-auto.px-6 {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+
+/* Target the footer section to ensure it does not push itself down with a margin-top */
+footer {
+  margin-top: 0 !important;
+}
+
 
 
