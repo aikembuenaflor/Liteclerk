@@ -209,4 +209,11 @@
   filter: grayscale(0%) brightness(1) opacity(1) drop-shadow(0 0 20px rgba(0, 255, 156, 0.6));
 }
 
+.icons-style {
+  /* This restores original colors and adds your glow */
+  filter: grayscale(0%) brightness(1) opacity(1) drop-shadow(0 0 20px rgba(0, 255, 156, 0.6));
+}
+
+
+
 
