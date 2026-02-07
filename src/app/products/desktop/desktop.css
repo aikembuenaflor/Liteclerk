@@ -58,3 +58,34 @@
   filter: blur(80px);
   z-index: 0;
 }
+
+@reference "../../../styles.css";
+
+/* Base Glass Card */
+.glass-card {
+  @apply bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-3xl transition-all duration-500 ease-out;
+}
+
+/* Hover Effect for Retail Packages (Primary - Blue) */
+.glass-card.hover\:border-primary\/40:hover {
+  @apply border-primary/60 scale-[1.02];
+  box-shadow: 0 0 30px rgba(0, 242, 255, 0.2), 
+              inset 0 0 20px rgba(0, 242, 255, 0.1);
+}
+
+/* Hover Effect for Touch Packages (Secondary - Green) */
+.glass-card.hover\:border-secondary\/40:hover {
+  @apply border-secondary/60 scale-[1.02];
+  box-shadow: 0 0 30px rgba(0, 255, 156, 0.2), 
+              inset 0 0 20px rgba(0, 255, 156, 0.1);
+}
+
+/* Specific Glow for the "Best Seller" (Package B Retail) which is already neon-border-glow */
+.neon-border-glow {
+  box-shadow: 0 0 15px rgba(0, 242, 255, 0.3);
+}
+
+.neon-border-glow:hover {
+  box-shadow: 0 0 40px rgba(0, 242, 255, 0.5), 
+              inset 0 0 20px rgba(0, 242, 255, 0.2);
+}
