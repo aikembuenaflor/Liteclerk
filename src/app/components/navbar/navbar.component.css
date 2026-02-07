@@ -1,5 +1,5 @@
 .glass-card {
-  background: rgba(10, 10, 10, 0.6); /* Darker for better contrast */
+  background: rgba(10, 10, 10, 0.6);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -15,56 +15,70 @@
   opacity: 0.4;
 }
 
-/* Helper for the icon if not in global */
+/* Base Navigation Link (White by default) */
+.nav-link {
+  color: #ffffff !important;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Combined Hover AND Active States */
+.nav-link:hover, 
+.nav-active {
+  color: #00f2fe !important;
+  text-shadow: 0 0 10px rgba(0, 242, 254, 0.6);
+  font-weight: 800;
+  opacity: 1 !important;
+}
+
+/* Material Icon helper */
 .material-symbols-outlined {
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
 
-.bg-gradient-neon {
-    /* Using your Liteclerk Teal (#00EAD3) and Blue (#09F) */
-    background: linear-gradient(90deg, #00EAD3 0%, #00f2fe 50%, #00d2ff 100%);
-    background-size: 200% auto;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+/* Neon Button Styles */
+.btn-neon-pulse {
+  --neon-color: #00f2fe;
+  --neon-gradient: linear-gradient(135deg, #00f2fe 0%, #00d1ff 100%);
+  
+  background: var(--neon-gradient);
+  color: #000 !important; /* Black text usually looks better on bright neon */
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
 }
 
-.bg-gradient-neon:hover {
-    /* Moves the gradient on hover for a "flowing" effect */
-    background-position: right center;
-    box-shadow: 0 0 30px rgba(0, 242, 254, 0.8);
-    filter: brightness(1.1);
+/* Pulse Animation using Box Shadow */
+.btn-neon-pulse {
+  animation: neon-pulse 2s infinite;
 }
 
-/* Optional: Subtle Pulse effect to attract attention */
-@keyframes button-pulse {
-    0% { box-shadow: 0 0 0 0 rgba(0, 234, 211, 0.7); }
-    70% { box-shadow: 0 0 0 10px rgba(0, 234, 211, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(0, 234, 211, 0); }
+@keyframes neon-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 242, 254, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(0, 242, 254, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 242, 254, 0);
+  }
 }
 
-.bg-gradient-neon {
-    animation: button-pulse 3s infinite;
+/* Hover Animation */
+.btn-neon-pulse:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+  box-shadow: 0 0 25px rgba(0, 242, 254, 0.8);
+  animation: none; /* Stops pulse on hover for a solid glow */
 }
 
-/* Define the entry animation */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* Active (Click) Effect */
+.btn-neon-pulse:active {
+  transform: scale(0.95);
 }
-
-/* Apply this to your <main> or a container wrapper in each page */
-.page-transition {
-    animation: fadeInUp 0.6s ease-out forwards;
-}
-
 
