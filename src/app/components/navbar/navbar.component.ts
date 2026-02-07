@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { CommonModule } from '@angular/common'; // Required for dynamic classes
+import { CommonModule } from '@angular/common'; 
+import { RouterLink, RouterLinkActive, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [RouterModule, CommonModule], 
+  /* Added RouterLink and RouterLinkActive to imports */
+  imports: [CommonModule, RouterModule, RouterLink, RouterLinkActive], 
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
