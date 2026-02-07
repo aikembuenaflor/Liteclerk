@@ -26,10 +26,13 @@
 }
 
 .marquee-container {
-  @apply relative flex overflow-hidden py-12 bg-background-dark/30;
-  /* Soft fade on edges */
+  /* Removed bg-background-dark/30 to make it transparent */
+  @apply relative flex overflow-hidden py-12;  
+  /* Soft fade on edges using mask-image */
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
   mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
+
 
 .logo-marquee-item {
   @apply h-16 md:h-20 w-auto opacity-50 brightness-0 invert transition-all duration-500 
@@ -197,16 +200,18 @@
   color: #ffffff !important;
 }
 
+/* Original Style logic */
 .logo-style {
-  /* This makes the colored SVG look like a light gray silhouette */
+  height: 4rem; 
+  width: auto;
   filter: grayscale(100%) brightness(1.5) opacity(0.5);
   transition: all 0.5s ease;
   cursor: pointer;
 }
 
 .logo-style:hover {
-  /* This restores original colors and adds your glow */
-  filter: grayscale(0%) brightness(1) opacity(1) drop-shadow(0 0 20px rgba(0, 255, 156, 0.6));
+  filter: grayscale(0%) brightness(1) opacity(1);
+  transform: scale(1.1); /* Added subtle pop */
 }
 
 .icons-style {

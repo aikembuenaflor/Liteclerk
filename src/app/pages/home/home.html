@@ -21,112 +21,47 @@ Delivers cutting-edge, easy to use software that solves retail and accounting pr
     <button class="neon-btn">SCHEDULE A FREE DEMO</button>
   </div>
 
-
-<!--marquee-->
-<section class="relative py-8 overflow-hidden pb-0">
-  <!-- Optional: Gradient masks to fade logos in/out at edges -->
-  <div class="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-background-dark to-transparent z-10"></div>
-  <div class="flex whitespace-nowrap">
-   <!-- Marquee wrapper -->
-<div class="flex gap-24 animate-marquee items-center hover:[animation-play-state:paused]">
-      
-  <div class="flex gap-24 items-center animate-marquee whitespace-nowrap">
-    <!-- First Set -->
-    <img src="aws-svgrepo-com.svg" 
-         alt="AWS" class="logo-style hover:drop-shadow-[0_0_20px_var(--glow-aws)]" />
-    <img src="sysprologo.svg" 
-         alt="SYSPRO" class="logo-style hover:drop-shadow-[0_0_20px_var(--glow-syspro)]" />
-    <img src="google-6.svg" 
-         alt="GOOGLE" class="logo-style hover:drop-shadow-[0_0_20px_var(--glow-white)]" />
-    <img src="azure-logo.svg" 
-         alt="AZURE" class="logo-style hover:drop-shadow-[0_0_20px_var(--glow-azure)]" />
-     <img src="discord-wordmark.svg" 
-         alt="DISCORD" class="logo-style hover:drop-shadow-[0_0_20px_var(--glow-discord)]" />
-    <img src="meta.svg" 
-         alt="META" class="logo-style hover:drop-shadow-[0_0_20px_var(--glow-meta)]" />
-    <img src="github.svg" 
-        alt="DISCORD" class="logo-style hover:drop-shadow-[0_0_20px_var(--glow-discord)]" />
-    <img src="google-logo.svg" 
-         alt="DISCORD" class="logo-style hover:drop-shadow-[0_0_20px_var(--glow-discord)]" />
-    <img src="rockson-logo.svg" 
-         alt="DISCORD" class="logo-style hover:drop-shadow-[0_0_20px_var(--glow-discord)]" />
-    <img src="polkadot-logo.svg" 
-         alt="DISCORD" class="logo-style hover:drop-shadow-[0_0_20px_var(--glow-discord)]" />
-  
-    <!-- Duplicate Set (For seamless loop) -->
-  <img src="aws-svgrepo-com.svg" 
-         alt="AWS" class="logo-style hover:drop-shadow-[0_0_20px_var(--glow-aws)]" />
-    <img src="sysprologo.svg" 
-         alt="SYSPRO" class="logo-style hover:drop-shadow-[0_0_20px_var(--glow-syspro)]" />
-    <img src="google-6.svg" 
-         alt="GOOGLE" class="logo-style hover:drop-shadow-[0_0_20px_var(--glow-white)]" />
-    <img src="azure-logo.svg" 
-         alt="AZURE" class="logo-style hover:drop-shadow-[0_0_20px_var(--glow-azure)]" />
-     <img src="discord-wordmark.svg" 
-         alt="DISCORD" class="logo-style hover:drop-shadow-[0_0_20px_var(--glow-discord)]" />
-    <img src="meta.svg" 
-         alt="META" class="logo-style hover:drop-shadow-[0_0_20px_var(--glow-meta)]" />
-    <img src="github.svg" 
-        alt="DISCORD" class="logo-style hover:drop-shadow-[0_0_20px_var(--glow-discord)]" />
-    <img src="google-logo.svg" 
-         alt="DISCORD" class="logo-style hover:drop-shadow-[0_0_20px_var(--glow-discord)]" />
-    <img src="rockson-logo.svg" 
-         alt="DISCORD" class="logo-style hover:drop-shadow-[0_0_20px_var(--glow-discord)]" />
-    <img src="polkadot-logo.svg" 
-         alt="DISCORD" class="logo-style hover:drop-shadow-[0_0_20px_var(--glow-discord)]" />
-    
+<!-- MarqueeSection -->
+<!-- The marquee-container handles the background and the edge fading via mask-image -->
+<div class="marquee-container">
+  <div class="flex gap-24 items-center animate-marquee hover:[animation-play-state:paused]">   
+    <!-- Loop through logos twice for a seamless infinite loop -->
+    <ng-container *ngFor="let logo of [...logos, ...logos]">
+      <img 
+        [src]="logo.src" 
+        [alt]="logo.alt" 
+        [class]="'logo-marquee-item ' + logo.glowClass" 
+      />
+    </ng-container>
   </div>
 </div>
 
-  </div>
-
-
-
-
 <!-- === END OF HOME PAGE HEADER CONTENT === -->
-
-
 <!-- === START OF SECTION 2 CONTENT === -->
-
 <!-- This loads the content from src/app/home/secondsection/secondsection.component.html -->
 <app-home-secondsection></app-home-secondsection>
-
 <!-- === END OF SECTION 2 CONTENT === -->
-
-
 <!-- section 3 start - a few more facts about us in -->
-
-
 <!-- FACTS IN NUMBERS – COMPACT -->
 <section class="w-full py-20 mb bg-blue relative overflow-hidden">
-
-
   <!-- Soft glow -->
   <div class="absolute inset-0 bg-black pointer-events-none"></div>
-
-
   <div class="relative max-w-6xl mx-auto px-6">
-
-
     <!-- Header -->
     <p class="tfont-sans text-secondary text-center text-xs tracking-[0.3em] uppercase mb-4 block cyber-glow">
       A Few More Facts 
     <p>
-
     <h2 class="text-3xl sm:text-4xl font-extrabold text-center text-white mb-10">
       About Us <span class="text-gradient drop-shadow-[0_0_15px_rgba(0,242,255,0.4)]">in Numbers</span>
     </h2>
-
-
     <!-- Cards Grid -->
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
 
   <!-- Card 1: Everything inside reacts to 'group-hover' -->
   <div class="glass-card group relative overflow-hidden rounded-2xl p-7 text-center transition-all duration-500 
               hover:-translate-y-2 
               hover:drop-shadow-[0_0_20px_rgba(0, 242, 195, 0.4)]">
-    
-    
     <!-- Content inside the card -->
     <div class="relative z-10">
       <div class="text-4xl font-extrabold text-white mb-2">
@@ -171,11 +106,6 @@ Delivers cutting-edge, easy to use software that solves retail and accounting pr
 
   <!-- section 3 end - a few more facts about us in -->
 
-
-
-
-
-
 <!-- section 4 start -->
 
 
@@ -191,10 +121,6 @@ Delivers cutting-edge, easy to use software that solves retail and accounting pr
 <div class="streak" style="left: 70%; animation-delay: 2s;"></div>
 <div class="streak" style="left: 90%; animation-delay: 6s;"></div>
 <div class="max-w-7xl mx-auto relative z-10">
-
-
- 
-
 
   <!-- Section Neon Glows -->
   <div class="absolute -top-40   -left-40 w-[520px] h-[520px] bg-green-300/20 rounded-full blur-[140px]"></div>
