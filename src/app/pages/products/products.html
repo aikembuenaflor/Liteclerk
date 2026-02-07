@@ -5,8 +5,10 @@
   <!-- Optional: Add a second primary glow for the right side for balance -->
     <div class="absolute -top-50 right-100 w-[500px] h-[500px] bg-[#00f2c3]/30 rounded-full blur-[120px]"></div>
   <!-- HERO CATALOG SECTION -->
-  <section class="relative w-full flex flex-col items-center justify-center overflow-hidden mb-20">
-    
+  <section class="relative w-full flex flex-col items-center justify-center overflow-hidden mb-30">
+    <div class="absolute inset-0 flex items-center justify-center z-0">
+      <h1 class="hero-bg-text select-none">PRODUCTS</h1>
+    </div>
     
     <div class="relative z-10 text-center px-6">
       <div class="flex flex-wrap justify-center gap-4 mb-10">
@@ -45,10 +47,13 @@
         <div class="category-label text-[#00EAD3]">Point of Sale</div>
         <h3 class="product-title">Liteclerk Desktop POS</h3>
         <p class="product-description">
-Reliable and easy-to-use point-of-sale software designed to manage sales, inventory, and reports in real time. Perfect for retail stores that need speed, accuracy, and control over daily operations.        </p>
-        <button class="read-more-btn bg-[#00EAD3]">
-          Read More <span class="material-symbols-outlined">arrow_forward</span>
-        </button>
+          A sleek desktop terminal experience featuring a high-performance neon blue interface. Engineered for heavy-duty retail environments where speed and stability are paramount.
+        </p>
+        <button 
+  class="read-more-btn bg-[#00EAD3]" 
+  [routerLink]="['/product/desktop']">
+  Read More <span class="material-symbols-outlined">arrow_forward</span>
+</button>
       </div>
     </div>
 
@@ -57,13 +62,15 @@ Reliable and easy-to-use point-of-sale software designed to manage sales, invent
               <div class="radial-touch bg-secondary/5 -right-20 top-0"></div>
 
       <div class="lg:w-1/2 relative z-10 order-2 lg:order-1 text-right lg:text-left">
-        <div class="category-label text-secondary">Mobility</div>
+        <div class="category-label text-[#00d2ff]">Mobility</div>
         <h3 class="product-title">Liteclerk Mobile POS</h3>
         <p class="product-description">
-A portable POS solution allowing businesses to process sales, print receipts, and manage transactions anywhere in the store. Compact, fast, and built for modern retail environments.        </p>
+          Take your business anywhere with our handheld POS solution. Featuring a vibrant green screen glow optimized for outdoor visibility and long-range wireless connectivity.
+        </p>
         <div class="flex lg:justify-start justify-end">
           <button class="read-more-btn bg-[#00d2ff]">
-            Read More <span class="material-symbols-outlined">arrow_forward</span>
+            Read More <span class="material-symbols-outlined" 
+            [routerLink]="['/product/mobile']">arrow_forward</span>
           </button>
         </div>
       </div>
@@ -97,9 +104,11 @@ A portable POS solution allowing businesses to process sales, print receipts, an
         <div class="category-label text-[#00EAD3]">Enterprise</div>
         <h3 class="product-title">Liteclerk SYSPRO ERP</h3>
         <p class="product-description">
-Keep your business data secure and accessible with cloud synchronization. Monitor sales, inventory, and reports anytime, anywhere with real-time updates.        </p>
+          Harness complex data visualization and real-time dashboard analytics. Our ERP system provides a 3D perspective of your supply chain and operational health.
+        </p>
         <button class="read-more-btn bg-[#00EAD3]">
-          Read More <span class="material-symbols-outlined">arrow_forward</span>
+          Read More <span class="material-symbols-outlined"
+          [routerLink]="['/product/syspro']">arrow_forward</span>
         </button>
       </div>
     </div>
@@ -112,10 +121,12 @@ Keep your business data secure and accessible with cloud synchronization. Monito
         <div class="category-label text-[#00d2ff]">Finance</div>
         <h3 class="product-title">Liteclerk Cloud FIS Accounting</h3>
         <p class="product-description">
-Turn business data into smart decisions with AI-powered analytics. Gain insights into sales trends, inventory movement, and customer behavior to improve performance.        </p>
+          Advanced cloud server infrastructure with flowing neon data streams. Manage bookkeeping, audits, and taxation through a secure, globally accessible financial portal.
+        </p>
         <div class="flex lg:justify-start justify-end">
           <button class="read-more-btn bg-[#00d2ff]">
-            Read More <span class="material-symbols-outlined">arrow_forward</span>
+            Read More <span class="material-symbols-outlined"
+            [routerLink]="['/product/fis']">arrow_forward</span>
           </button>
         </div>
       </div>
@@ -125,7 +136,7 @@ Turn business data into smart decisions with AI-powered analytics. Gain insights
           <div class="img-overlay bg-[url('https://images.unsplash.com')]"></div>
           <div class="relative text-center p-6">
             <span class="material-symbols-outlined text-[#09F] text-9xl block mb-4">cloud_done</span>
-            <div class="neon-line bg-[#00d2ff]"></div>
+            <div class="neon-line bg-[#09F]"></div>
           </div>
         </div>
       </div>
@@ -133,8 +144,6 @@ Turn business data into smart decisions with AI-powered analytics. Gain insights
 
     <!-- 5. CLOUD HIS PAYROLL -->
     <div class="product-card">
-              <div class="radial-touch bg-primary/5 -left-20 top-0"></div>
-
       <div class="lg:w-1/2 flex justify-center relative">
         <div class="light-leak-effect bg-[#00EAD3]"></div>
         <div class="floating-icon icon-box">
@@ -149,9 +158,11 @@ Turn business data into smart decisions with AI-powered analytics. Gain insights
         <div class="category-label text-[#00EAD3]">Payroll</div>
         <h3 class="product-title">Liteclerk Cloud HIS Payroll</h3>
         <p class="product-description">
-Connect your POS system with enterprise-level ERP solutions like SYSPRO for seamless business operations across accounting, inventory, and management systems.        </p>
+          Human-centric digital management. An abstract 3D icon system for people management, benefits administration, and automated payroll processing.
+        </p>
         <button class="read-more-btn bg-[#00EAD3]">
-          Read More <span class="material-symbols-outlined">arrow_forward</span>
+          Read More <span class="material-symbols-outlined"
+          [routerLink]="['/product/his']">arrow_forward</span>
         </button>
       </div>
     </div>
