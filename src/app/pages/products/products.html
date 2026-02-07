@@ -1,1 +1,159 @@
-<p>products works!</p>
+<section class="relative pt-48 pb-0 overflow-hidden hero-bg">
+   <!-- New Neon Glow Element -->
+  <div class="corner-glow"></div>
+
+  <!-- Optional: Add a second primary glow for the right side for balance -->
+  <div class="absolute -bottom-24 -right-24 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] pointer-events-none"></div>
+    <div class="absolute -top-50 right-100 w-[500px] h-[500px] bg-[#00f2c3]/30 rounded-full blur-[120px]"></div>
+  <!-- HERO CATALOG SECTION -->
+  <section class="relative w-full flex flex-col items-center justify-center overflow-hidden mb-30">
+    <div class="absolute inset-0 flex items-center justify-center z-0">
+      <h1 class="hero-bg-text select-none">PRODUCTS</h1>
+    </div>
+    
+    <div class="relative z-10 text-center px-6">
+      <div class="flex flex-wrap justify-center gap-4 mb-10">
+        <span class="badge-blue">OUR PRODUCTS</span>
+      </div>
+      
+      <h2 class="text-5xl md:text-7xl text-white font-extrabold mb-8 tracking-wide Leading-tight">
+        Everything Your <br/> 
+        <span class="bg-gradient-to-r from-[#00f2c3] to-[#00d2ff] bg-clip-text text-transparent">Business Needs</span>
+      </h2>
+      
+      <p class="mt-8 text-gray-400 text-lg lg:text-xl font-light tracking-wide max-w-3xl mx-auto leading-relaxed">
+        A comprehensive suite of professional tools designed to help you manage your operations, streamline data workflows, and master your business finances.
+      </p>
+    </div>
+  </section>
+
+  <!-- PRODUCT LIST SECTION -->
+  <section class="w-full max-w-[1200px] mx-auto px-6 py-12 flex flex-col gap-24 mb-32">
+    
+    <!-- 1. DESKTOP POS -->
+     
+    <div class="product-card relative">
+        <div class="radial-touch bg-primary/5 -left-20 top-0"></div>
+      <div class="lg:w-1/2 flex justify-center relative">
+        <div class="light-leak-effect bg-[#00EAD3]"></div>
+        <div class="floating-icon icon-box">
+          <div class="img-overlay bg-[url('https://images.unsplash.com')]"></div>
+          <div class="relative text-center p-6">
+            <span class="material-symbols-outlined text-[#00EAD3] text-9xl block mb-4">desktop_windows</span>
+            <div class="neon-line bg-[#00EAD3]"></div>
+          </div>
+        </div>
+      </div>
+      <div class="lg:w-1/2 relative z-10">
+        <div class="category-label text-[#00EAD3]">Point of Sale</div>
+        <h3 class="product-title">Liteclerk Desktop POS</h3>
+        <p class="product-description">
+          A sleek desktop terminal experience featuring a high-performance neon blue interface. Engineered for heavy-duty retail environments where speed and stability are paramount.
+        </p>
+        <button class="read-more-btn bg-[#00EAD3]">
+          Read More <span class="material-symbols-outlined">arrow_forward</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- 2. MOBILE POS (Reversed) -->
+    <div class="product-card">
+      <div class="lg:w-1/2 relative z-10 order-2 lg:order-1 text-right lg:text-left">
+        <div class="category-label text-[#00d2ff]">Mobility</div>
+        <h3 class="product-title">Liteclerk Mobile POS</h3>
+        <p class="product-description">
+          Take your business anywhere with our handheld POS solution. Featuring a vibrant green screen glow optimized for outdoor visibility and long-range wireless connectivity.
+        </p>
+        <div class="flex lg:justify-start justify-end">
+          <button class="read-more-btn bg-[#09F]">
+            Read More <span class="material-symbols-outlined">arrow_forward</span>
+          </button>
+        </div>
+      </div>
+      <div class="lg:w-1/2 flex justify-center relative order-1 lg:order-2">
+        <div class="light-leak-effect bg-[#09F]"></div>
+        <div class="floating-icon icon-box">
+          <div class="img-overlay bg-[url('https://images.unsplash.com')]"></div>
+          <div class="relative text-center p-6">
+            <span class="material-symbols-outlined text-[#09F] text-9xl block mb-4">vibration</span>
+            <div class="neon-line bg-[#09F]"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. SYSPRO ERP -->
+    <div class="product-card">
+      <div class="lg:w-1/2 flex justify-center relative">
+        <div class="light-leak-effect bg-[#00EAD3]"></div>
+        <div class="floating-icon icon-box">
+          <div class="img-overlay bg-[url('https://images.unsplash.com')]"></div>
+          <div class="relative text-center p-6">
+            <span class="material-symbols-outlined text-[#00EAD3] text-9xl block mb-4">insights</span>
+            <div class="neon-line bg-[#00EAD3]"></div>
+          </div>
+        </div>
+      </div>
+      <div class="lg:w-1/2 relative z-10">
+        <div class="category-label text-[#00EAD3]">Enterprise</div>
+        <h3 class="product-title">Liteclerk SYSPRO ERP</h3>
+        <p class="product-description">
+          Harness complex data visualization and real-time dashboard analytics. Our ERP system provides a 3D perspective of your supply chain and operational health.
+        </p>
+        <button class="read-more-btn bg-[#00EAD3]">
+          Read More <span class="material-symbols-outlined">arrow_forward</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- 4. CLOUD FIS (Reversed) -->
+    <div class="product-card">
+      <div class="lg:w-1/2 relative z-10 order-2 lg:order-1 text-right lg:text-left">
+        <div class="category-label text-[#09F]">Finance</div>
+        <h3 class="product-title">Liteclerk Cloud FIS Accounting</h3>
+        <p class="product-description">
+          Advanced cloud server infrastructure with flowing neon data streams. Manage bookkeeping, audits, and taxation through a secure, globally accessible financial portal.
+        </p>
+        <div class="flex lg:justify-start justify-end">
+          <button class="read-more-btn bg-[#09F]">
+            Read More <span class="material-symbols-outlined">arrow_forward</span>
+          </button>
+        </div>
+      </div>
+      <div class="lg:w-1/2 flex justify-center relative order-1 lg:order-2">
+        <div class="light-leak-effect bg-[#09F]"></div>
+        <div class="floating-icon icon-box">
+          <div class="img-overlay bg-[url('https://images.unsplash.com')]"></div>
+          <div class="relative text-center p-6">
+            <span class="material-symbols-outlined text-[#09F] text-9xl block mb-4">cloud_done</span>
+            <div class="neon-line bg-[#09F]"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. CLOUD HIS PAYROLL -->
+    <div class="product-card">
+      <div class="lg:w-1/2 flex justify-center relative">
+        <div class="light-leak-effect bg-[#00EAD3]"></div>
+        <div class="floating-icon icon-box">
+          <div class="img-overlay bg-[url('https://images.unsplash.com')]"></div>
+          <div class="relative text-center p-6">
+            <span class="material-symbols-outlined text-[#00EAD3] text-9xl block mb-4">groups</span>
+            <div class="neon-line bg-[#00EAD3]"></div>
+          </div>
+        </div>
+      </div>
+      <div class="lg:w-1/2 relative z-10">
+        <div class="category-label text-[#00EAD3]">Payroll</div>
+        <h3 class="product-title">Liteclerk Cloud HIS Payroll</h3>
+        <p class="product-description">
+          Human-centric digital management. An abstract 3D icon system for people management, benefits administration, and automated payroll processing.
+        </p>
+        <button class="read-more-btn bg-[#00EAD3]">
+          Read More <span class="material-symbols-outlined">arrow_forward</span>
+        </button>
+      </div>
+    </div>
+
+  </section>
