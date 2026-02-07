@@ -79,5 +79,22 @@ footer {
   margin-top: 0 !important;
 }
 
+/* Animation Keyframes */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* This class will trigger every time a new component is loaded into the outlet */
+.fade-in-section {
+  animation: slideInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
 
 
