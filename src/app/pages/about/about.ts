@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Cta } from "../../components/cta/cta";
+import { Why} from "../../components/why/why";
 
 @Component({
   selector: 'app-about',
   templateUrl: './about.html',
   styleUrls: ['./about.css'],
-  imports: [Cta]
+  imports: [Cta, Why ]
 })
 export class AboutComponent implements OnInit {
 

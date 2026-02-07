@@ -1,0 +1,110 @@
+@reference "../../../styles.css";
+
+
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
+}
+/* Custom color variables to match your Tailwind setup */
+:host {
+  --primary: #00f2c3;
+  --accent-blue: #00d2ff;
+}
+
+.cyber-gradient-text {
+  background: linear-gradient(90deg, var(--primary) 0%, var(--accent-blue) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.neon-glow-primary {
+  box-shadow: 0 0 25px rgba(0, 234, 211, 0.4);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  border-color: rgba(0, 234, 211, 0.3);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.hero-mesh {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 80% 20%, rgba(0, 153, 255, 0.1) 0%, transparent 40%), 
+              radial-gradient(circle at 20% 80%, rgba(0, 234, 211, 0.1) 0%, transparent 40%);
+  z-index: -1;
+}
+
+.floating-anim {
+  animation: floating 6s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+}
+
+/* Fallback for Material Icons if not loaded globally */
+.material-icons-outlined {
+  vertical-align: middle;
+}
+
+/* Primary Button: Glowing Teal/Blue Gradient */
+.btn-primary {
+    position: relative;
+    padding: 12px 32px;
+    background: linear-gradient(90deg, #00f2c3 0%, #00d2ff 100%);
+    color: #020617;
+    font-weight: 700;
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+    border-radius: 9999px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(0, 234, 211, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 30px rgba(0, 234, 211, 0.5);
+    filter: brightness(1.1);
+}
+
+/* Secondary Button: Ghost/Glass Effect */
+.btn-secondary {
+    padding: 12px 32px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+    border-radius: 9999px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #00EAD3;
+    color: #00EAD3;
+}
+
+/* Reusable Text Gradient if not already in your file */
+.text-gradient-lite {
+    background: linear-gradient(90deg, #00f2c3 0%, #00d2ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+

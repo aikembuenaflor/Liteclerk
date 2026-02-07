@@ -3,65 +3,66 @@
         
         <!-- Logo -->
         <div class="flex items-center gap-3">
-            <!-- Logo/Brand Section (Clickable) -->
-<a routerLink="/" class="flex items-center gap-3 cursor-pointer hover:opacity-90 transition-opacity">
-    <div class="w-10 h-10 flex items-center justify-center">
-        <!-- Your SVG Logo -->
-        <img src="liteclerk-logo.svg" alt="logo" class="w-full h-full object-contain">
-    </div>
-    <span class="font-display font-extrabold text-xl md:text-2xl tracking-tighter text-white">LITECLERK</span>
-</a>
-
+            <a routerLink="/" class="flex items-center gap-3 cursor-pointer hover:opacity-90 transition-opacity">
+                <div class="w-10 h-10 flex items-center justify-center">
+                    <img src="liteclerk-logo.svg" alt="logo" class="w-full h-full object-contain">
+                </div>
+                <span class="font-display font-extrabold text-xl md:text-2xl tracking-tighter text-white">LITECLERK</span>
+            </a>
         </div>
         
-        <!-- Desktop Navigation (Hidden below LG) -->
+        <!-- Desktop Navigation -->
         <div class="hidden lg:flex items-center gap-8 text-xs font-bold tracking-wide">
-            <a routerLink="/" class="hover:text-primary transition-all text-slate-300">HOME</a>
-                        <a routerLink="/about" class="hover:text-primary transition-all text-slate-300">ABOUT US</a>
+            <a routerLink="/" 
+               routerLinkActive="nav-active" 
+               [routerLinkActiveOptions]="{exact: true}" 
+               class="nav-link hover:text-primary">HOME</a>
 
-            <a routerLink="/products" class="hover:text-primary transition-all text-slate-300">PRODUCTS</a>
-            <a routerLink="/partners" class="hover:text-primary transition-all text-slate-300">PARTNERS</a>
-            <a routerLink="/contact" class="hover:text-primary transition-all text-slate-300">CONTACT US</a>
+            <a routerLink="/about" 
+               routerLinkActive="nav-active" 
+               class="nav-link hover:text-primary">ABOUT US</a>
+
+            <a routerLink="/products" 
+               routerLinkActive="nav-active" 
+               class="nav-link hover:text-primary">PRODUCTS</a>
+
+            <a routerLink="/partners" 
+               routerLinkActive="nav-active" 
+               class="nav-link hover:text-primary">PARTNERS</a>
+
+            <a routerLink="/contact" 
+               routerLinkActive="nav-active" 
+               class="nav-link hover:text-primary">CONTACT US</a>
         </div>
 
-        <!-- Right Side: Login + Demo + Burger -->
+        <!-- Right Side -->
         <div class="flex items-center gap-4">
-            <a class="hidden sm:block text-sm font-bold hover:text-primary transition-colors text-slate-200" routerLink="/login">LOGIN</a>
-            <button class="bg-gradient-neon text-black font-extrabold px-5 py-2 rounded-full text-xs md:text-sm shadow-[0_0_20px_rgba(0,242,254,0.5)] hover:scale-105 transition-transform">
-                BOOK DEMO
-            </button>
+          
             
-             <!-- Smooth Transition Hamburger Button -->
-    <button (click)="toggleMenu()" class="lg:hidden relative w-10 h-10 flex items-center justify-center outline-none hover:bg-white/10 rounded-lg transition-colors overflow-hidden">
-        <!-- Burger Icon -->
-        <img src="burger.svg" alt="Menu" 
-             [ngClass]="{'opacity-0 rotate-90': isMenuOpen, 'opacity-100 rotate-0': !isMenuOpen}"
-             class="w-7 h-7 absolute transition-all duration-300 ease-in-out">
-        
-        <!-- Cross Icon -->
-        <img src="cross.svg" alt="Close" 
-             [ngClass]="{'opacity-100 rotate-0': isMenuOpen, 'opacity-0 -rotate-90': !isMenuOpen}"
-             class="w-7 h-7 absolute transition-all duration-300 ease-in-out">
-    </button>
+           <button class="btn-neon-pulse font-extrabold px-5 py-2 rounded-full text-xs md:text-sm">
+                 BOOK DEMO
+            </button>
+
+            
+            <button (click)="toggleMenu()" class="lg:hidden relative w-10 h-10 flex items-center justify-center outline-none hover:bg-white/10 rounded-lg transition-colors overflow-hidden">
+                <img src="burger.svg" alt="Menu" [ngClass]="{'opacity-0 rotate-90': isMenuOpen, 'opacity-100 rotate-0': !isMenuOpen}" class="w-7 h-7 absolute transition-all duration-300 ease-in-out">
+                <img src="cross.svg" alt="Close" [ngClass]="{'opacity-100 rotate-0': isMenuOpen, 'opacity-0 -rotate-90': !isMenuOpen}" class="w-7 h-7 absolute transition-all duration-300 ease-in-out">
+            </button>
         </div>
 
-        <!-- Mobile Dropdown Menu -->
-        <div [ngClass]="{
-                'opacity-100 translate-y-0 pointer-events-auto': isMenuOpen,
-                'opacity-0 -translate-y-4 pointer-events-none': !isMenuOpen
-             }" 
+        <!-- Mobile Dropdown -->
+        <div [ngClass]="{'opacity-100 translate-y-0 pointer-events-auto': isMenuOpen, 'opacity-0 -translate-y-4 pointer-events-none': !isMenuOpen}" 
              class="absolute top-[calc(100%+12px)] left-0 w-full flex flex-col gap-4 p-6 glass-card rounded-2xl lg:hidden border border-white/10 transition-all duration-300 ease-in-out">
             
-            <a routerLink="/" (click)="isMenuOpen = false" class="text-slate-300 font-bold hover:text-primary py-2 transition-colors">HOME</a>
-            <a routerLink="/products" (click)="isMenuOpen = false" class="text-slate-300 font-bold hover:text-primary py-2 transition-colors">PRODUCTS</a>
-            <a routerLink="/about" (click)="isMenuOpen = false" class="text-slate-300 font-bold hover:text-primary py-2 transition-colors">ABOUT US</a>
-            <a routerLink="/partners" (click)="isMenuOpen = false" class="text-slate-300 font-bold hover:text-primary py-2 transition-colors">PARTNERS</a>
-            <a routerLink="/contact" (click)="isMenuOpen = false" class="text-slate-300 font-bold hover:text-primary py-2 transition-colors">CONTACT US</a>
+            <a routerLink="/" routerLinkActive="nav-active" [routerLinkActiveOptions]="{exact: true}" (click)="isMenuOpen = false" class="nav-link py-2">HOME</a>
+            <a routerLink="/products" routerLinkActive="nav-active" (click)="isMenuOpen = false" class="nav-link py-2">PRODUCTS</a>
+            <a routerLink="/about" routerLinkActive="nav-active" (click)="isMenuOpen = false" class="nav-link py-2">ABOUT US</a>
+            <a routerLink="/partners" routerLinkActive="nav-active" (click)="isMenuOpen = false" class="nav-link py-2">PARTNERS</a>
+            <a routerLink="/contact" routerLinkActive="nav-active" (click)="isMenuOpen = false" class="nav-link py-2">CONTACT US</a>
             
             <hr class="border-white/10 my-2">
             
-            <!-- Mobile-only Login Link -->
-            <a routerLink="/login" (click)="isMenuOpen = false" class="text-slate-300 font-bold hover:text-primary py-2 sm:hidden">LOGIN</a>
+          
         </div>
     </div>
 </nav>
