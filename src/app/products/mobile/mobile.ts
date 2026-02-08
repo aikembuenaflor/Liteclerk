@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { Cta } from '../../components/cta/cta';
 
 @Component({
   selector: 'app-mobile',
-  imports: [],
+  imports: [Cta],
   templateUrl: './mobile.html',
   styleUrl: './mobile.css',
 })

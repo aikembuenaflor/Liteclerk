@@ -47,4 +47,15 @@ module.exports = {
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
   ],
+
+  
+  theme: {
+    extend: {
+      animation: {
+        'bounce-slow': 'bounce 3s linear infinite',
+      }
+    },
+  },
 }
+
+
