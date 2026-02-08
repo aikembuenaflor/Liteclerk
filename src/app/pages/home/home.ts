@@ -16,15 +16,16 @@ import { Why } from "../../components/why/why";
 })
 export class Home {
    logos = [
-    { src: "aws-svgrepo-com.svg", alt: "AWS", glowClass: "hover:drop-shadow-[0_0_20px_var(--glow-aws)]" },
-    { src: "sysprologo.svg", alt: "SYSPRO", glowClass: "hover:drop-shadow-[0_0_20px_var(--glow-syspro)]" },
-    { src: "google-6.svg", alt: "GOOGLE", glowClass: "hover:drop-shadow-[0_0_20px_var(--glow-white)]" },
-    { src: "azure-logo.svg", alt: "AZURE", glowClass: "hover:drop-shadow-[0_0_20px_var(--glow-azure)]" },
-    { src: "discord-wordmark.svg", alt: "DISCORD", glowClass: "hover:drop-shadow-[0_0_20px_var(--glow-discord)]" },
-    { src: "meta.svg", alt: "META", glowClass: "hover:drop-shadow-[0_0_20px_var(--glow-meta)]" },
-    { src: "github.svg", alt: "GITHUB", glowClass: "hover:drop-shadow-[0_0_20px_var(--glow-white)]" },
-    { src: "google-logo.svg", alt: "GOOGLE_ALT", glowClass: "hover:drop-shadow-[0_0_20px_var(--glow-white)]" },
-    { src: "rockson-logo.svg", alt: "ROCKSON", glowClass: "hover:drop-shadow-[0_0_20px_var(--glow-primary)]" },
-    { src: "polkadot-logo.svg", alt: "POLKADOT", glowClass: "hover:drop-shadow-[0_0_20px_var(--glow-primary)]" }
+     { src: "/icons/aws-svgrepo-com.svg", alt: "AWS", glowClass: "hover:drop-shadow-[0_0_20px_var(--glow-aws)]" },
+    { src: "/icons/sysprologo.svg", alt: "SYSPRO", glowClass: "hover:drop-shadow-[0_0_20px_var(--glow-syspro)]" },
+    { src: "/icons/google-6.svg", alt: "GOOGLE", glowClass: "hover:drop-shadow-[0_0_20px_var(--glow-white)]" },
+    { src: "/icons/azure-logo.svg", alt: "AZURE", glowClass: "hover:drop-shadow-[0_0_20px_var(--glow-azure)]" },
+    { src: "/icons/discord-wordmark.svg", alt: "DISCORD", glowClass: "hover:drop-shadow-[0_0_20px_var(--glow-discord)]" },
+    { src: "/icons/meta.svg", alt: "META", glowClass: "hover:drop-shadow-[0_0_20px_var(--glow-meta)]" },
+    { src: "/icons/github.svg", alt: "GITHUB", glowClass: "hover:drop-shadow-[0_0_20px_var(--glow-white)]" },
+    { src: "/icons/google-logo.svg", alt: "GOOGLE_ALT", glowClass: "hover:drop-shadow-[0_0_20px_var(--glow-white)]" },
+    { src: "/icons/rockson-logo.svg", alt: "ROCKSON", glowClass: "hover:drop-shadow-[0_0_20px_var(--glow-primary)]" },
+    { src: "/icons/polkadot-logo.svg", alt: "POLKADOT", glowClass: "hover:drop-shadow-[0_0_20px_var(--glow-primary)]" },
+
   ];
 }
