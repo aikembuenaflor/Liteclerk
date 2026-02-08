@@ -4,7 +4,7 @@
         <div class="flex items-center gap-3">
             <a routerLink="/" class="flex items-center gap-3 cursor-pointer hover:opacity-90 transition-opacity">
                 <div class="w-10 h-10 flex items-center justify-center">
-                    <img src="liteclerk-logo.svg" alt="logo" class="w-full h-full object-contain">
+                    <img src="/icons/liteclerk-logo.svg" alt="logo" class="w-full h-full object-contain">
                 </div>
                 <span class="font-display font-extrabold text-xl md:text-2xl tracking-tighter text-white">LITECLERK</span>
             </a>
@@ -44,8 +44,8 @@
 
             
             <button (click)="toggleMenu()" class="lg:hidden relative w-10 h-10 flex items-center justify-center outline-none hover:bg-white/10 rounded-lg transition-colors overflow-hidden">
-                <img src="burger.svg" alt="Menu" [ngClass]="{'opacity-0 rotate-90': isMenuOpen, 'opacity-100 rotate-0': !isMenuOpen}" class="w-7 h-7 absolute transition-all duration-300 ease-in-out">
-                <img src="cross.svg" alt="Close" [ngClass]="{'opacity-100 rotate-0': isMenuOpen, 'opacity-0 -rotate-90': !isMenuOpen}" class="w-7 h-7 absolute transition-all duration-300 ease-in-out">
+                <img src="/icons/burger.svg" alt="Menu" [ngClass]="{'opacity-0 rotate-90': isMenuOpen, 'opacity-100 rotate-0': !isMenuOpen}" class="w-7 h-7 absolute transition-all duration-300 ease-in-out">
+                <img src="/icons/cross.svg" alt="Close" [ngClass]="{'opacity-100 rotate-0': isMenuOpen, 'opacity-0 -rotate-90': !isMenuOpen}" class="w-7 h-7 absolute transition-all duration-300 ease-in-out">
             </button>
         </div>
 

@@ -129,6 +129,30 @@
     z-index: 1;
 }
 
+
+
+
+.btn-primary {
+    position: relative;
+    padding: 12px 32px;
+    background: linear-gradient(90deg, #00f2c3 0%, #00d2ff 100%);
+    color: #020617;
+    font-weight: 700;
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+    border-radius: 9999px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(0, 234, 211, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 30px rgba(0, 234, 211, 0.5);
+    filter: brightness(1.1);
+}
+
 /* Specific colors if not using Tailwind bg-primary/secondary */
 .bg-primary\/5 { background-color: rgba(0, 234, 211, 0.68); }
 .bg-secondary\/5 { background-color: rgba(44, 202, 238, 0.77); }
