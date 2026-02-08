@@ -1,21 +1,147 @@
+<!-- Hero Section -->
+<section class="relative pt-32 overflow-hidden bg-zinc-950 text-white">
+ <div class="desktop-wrapper">
+  <!-- Background Decorations -->
+  <div class="corner-glow"></div>
+  <div class="streak" style="left: 10%; animation-delay: 1s;"></div>
+  <div class="streak" style="left: 80%; animation-delay: 5s;"></div>
 
-<section class="relative w-full flex flex-col items-center justify-center pt-48 overflow-hidden mb-30">
-    <div class="absolute inset-0 flex items-center justify-center z-0">
-      <h1 class="hero-bg-text select-none">PRODUCTS</h1>
-    </div>
-    
-    <div class="relative z-10 text-center px-6">
-      <div class="flex flex-wrap justify-center gap-4 mb-10">
-        <span class="badge-blue">OUR PRODUCTS</span>
+  <!-- Hero Section -->
+  <section class="relative pt-12 pb-20 overflow-hidden">
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+      <div class="z-10">
+        <span class="inline-block px-4 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-semibold tracking-widest uppercase mb-6 text-secondary cyber-glow">
+          Revolutionizing Retail
+        </span>
+        <h1 class="text-6xl md:text-7xl font-extrabold mb-6 leading-tight">
+          <span class="text-gradient">Liteclerk</span><br/>
+          Mobile POS
+        </h1>
+        <p class="text-xl text-slate-400 max-w-lg mb-10 leading-relaxed">
+          Designed for smooth and efficient retail on the go. Experience enterprise-grade management in the palm of your hand.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <button class="btn-primary">Get Started Now</button>
+          <button class="btn-secondary">Watch Demo</button>
+        </div>
       </div>
-      
-      <h2 class="text-5xl md:text-7xl text-white font-extrabold mb-8 tracking-wide Leading-tight">
-        Everything Is <br/> 
-        <span class="bg-gradient-to-r from-[#00f2c3] to-[#00d2ff] bg-clip-text text-transparent">Mobile?</span>
-      </h2>
-      
-      <p class="mt-8 text-gray-400 text-lg lg:text-xl font-light tracking-wide max-w-3xl mx-auto leading-relaxed">
-        A comprehensive suite of professional tools designed to help you manage your operations, streamline data workflows, and master your business finances.
-      </p>
+
+      <div class="relative flex justify-center lg:justify-end">
+        <div class="relative w-full max-w-md floating">
+          <div class="absolute inset-0 bg-primary/20 blur-[100px] rounded-full"></div>
+          <img alt="Mobile POS Device" class="relative z-10 rounded-[3rem] border-8 border-zinc-900 shadow-2xl brightness-110" src="https://lh3.googleusercontent.com"/>
+          <div class="absolute -top-10 -right-10 glass-card p-6 border-primary/30 z-20 neon-border-glow">
+            <div class="text-primary font-bold text-2xl cyber-glow">99.9%</div>
+            <div class="text-xs text-slate-400">System Uptime</div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
+
+  <!-- Features Section -->
+  <section class="py-24 relative">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold mb-4 cyber-glow">Powerful Features</h2>
+        <p class="text-slate-400">Everything you need to scale your business operations</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="glass-card p-8 group hover:border-secondary/40">
+          <div class="w-16 h-16 icon-box-secondary mb-8 transition-transform group-hover:scale-110">
+            <span class="material-icons text-secondary text-3xl">location_on</span>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Real-time Tracking</h3>
+          <p class="text-slate-400 leading-relaxed mb-6">Monitor inventory across multiple locations with surgical precision from any device.</p>
+          <div class="h-1 w-12 bg-secondary rounded-full group-hover:w-full transition-all duration-500"></div>
+        </div>
+
+        <div class="glass-card p-8 group hover:border-primary/40">
+          <div class="w-16 h-16 icon-box-primary mb-8 transition-transform group-hover:scale-110">
+            <span class="material-icons text-primary text-3xl">cloud_queue</span>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Cloud Remote Control</h3>
+          <p class="text-slate-400 leading-relaxed mb-6">Experience seamless data synchronization. Update prices and levels across your network instantly.</p>
+          <div class="h-1 w-12 bg-primary rounded-full group-hover:w-full transition-all duration-500"></div>
+        </div>
+
+        <div class="glass-card p-8 group hover:border-red-500/40">
+          <div class="w-16 h-16 flex items-center justify-center rounded-2xl bg-red-500/10 border border-red-500/20 mb-8 transition-transform group-hover:scale-110">
+            <span class="material-icons text-red-500 text-3xl">security</span>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Prevent Theft</h3>
+          <p class="text-slate-400 leading-relaxed mb-6">Advanced audit logs and security permissions ensure your business stays protected.</p>
+          <div class="h-1 w-12 bg-red-500 rounded-full group-hover:w-full transition-all duration-500"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Bundle Section -->
+  <section class="py-24 relative overflow-hidden">
+    <div class="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
+    <div class="max-w-7xl mx-auto">
+        <div class="bg-[#0a0a0a]/90 rounded-[2.4rem] p-12 lg:p-16 relative overflow-hidden">
+          <div class="absolute -right-20 -top-20 w-96 h-96 bg-primary/5 blur-[100px] rounded-full"></div>
+          
+          <div class="grid lg:grid-cols-3 gap-12 items-center">
+            <div class="order-2 lg:order-1">
+              <h4 class="text-primary font-bold text-sm tracking-widest uppercase mb-4 cyber-glow">Featured Bundle</h4>
+              <h2 class="text-4xl font-extrabold mb-8 text-gradient">Package A</h2>
+              <div class="bg-primary/10 border border-primary/20 rounded-xl px-4 py-2 inline-block mb-8">
+                <span class="text-primary font-semibold">Package Inclusion</span>
+              </div>
+              <ul class="space-y-6">
+                <li class="flex items-start gap-3">
+                  <span class="material-icons text-primary mt-1">check_circle</span>
+                  <div>
+                    <p class="font-bold">Liteclerk Mobile/Cloud POS Software</p>
+                    <p class="text-sm text-slate-400">Industry-leading core system</p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="material-icons text-primary mt-1">check_circle</span>
+                  <div>
+                    <p class="font-bold">iMin M2 Pro Terminal</p>
+                    <p class="text-sm text-slate-400">Built-in 58mm Seiko High Speed Printer</p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="material-icons text-secondary mt-1">add_circle</span>
+                  <div>
+                    <p class="font-bold">Optional: Cloud Back-office</p>
+                    <p class="text-sm text-slate-400 italic">Integration with AI Prompt Support</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="order-1 lg:order-2 flex justify-center relative">
+              <div class="absolute inset-0 bg-primary/20 blur-[60px] rounded-full scale-75"></div>
+              <img alt="iMin M2 Pro POS Terminal" class="relative z-10 w-full max-w-xs rounded-3xl shadow-2xl border-4 border-zinc-800 rotate-3 transition-transform hover:rotate-0 duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAV6FUmJUkxr1qNGFKhc44fJsWzMIrZfvU0v9uZR5ybCuCw7dvrgRrHs3Cfg8iW89mdh8UnxZBUrJx0PDgM_ZtiVLu72lxs63vXnuGp9otQ_UimizjXpjxss8Y-p8yh9O3WNOUCOLaRdosh1YY52Kh0RVigpUOVJ-W-gfQssDkgftN9J4uR-qDTX-3pL9kaIAC0KJ4Nnlr8nYFj_QXo6XfaUHYt2AvpnU6ifx0cFrzlg7SUIZy9pztTo8Lew8-lGZeUnfMQ5kcmen64"/>
+            </div>
+
+            <div class="order-3 space-y-4">
+              <div class="bg-primary text-slate-900 p-6 rounded-2xl shadow-[0_0_15px_rgba(0,242,255,0.3)] hover:-translate-x-2 transition-transform cursor-default">
+                <p class="text-sm font-bold leading-snug">Manage items, inventory, suppliers, customers, and sales with ease. Includes daily tracking & data control.</p>
+              </div>
+              <div class="bg-primary/90 text-slate-900 p-6 rounded-2xl hover:-translate-x-2 transition-transform cursor-default">
+                <p class="text-sm font-bold leading-snug">Set up own pay types, tax rates, and discounts. Generate Z-Readings and inventory summaries.</p>
+              </div>
+              <div class="bg-primary/80 text-slate-900 p-6 rounded-2xl hover:-translate-x-2 transition-transform cursor-default">
+                <p class="text-sm font-bold leading-snug">Designed for quick learning and daily use—boost accuracy and enhance customer service.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-16 text-center border-t border-white/10 pt-8">
+            <p class="text-secondary font-medium text-lg cyber-glow">
+              The most cost-effective "Turn-key" POS solution with <span class="font-extrabold underline underline-offset-4">no monthly fees</span>.
+            </p>
+          </div>
+        </div>
+      </div>
+      <app-cta></app-cta>
+
+  </section>
+</div>
