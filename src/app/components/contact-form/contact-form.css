@@ -6,15 +6,9 @@
   @apply bg-gradient-to-r from-primary to-secondary text-slate-900 font-bold px-8 py-4 rounded-full 
          transition-all duration-300 hover:shadow-[0_0_25px_rgba(0,242,195,0.6)] hover:scale-105 active:scale-95;
 }
-
-.text-gradient {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
-}
-
 .glass-card {
   @apply bg-white/[0.02] backdrop-blur-xl border border-white/10 transition-all duration-300;
 }
-
 :host {
   /* Define glow colors here for cleaner HTML */
   --glow-aws: rgba(0, 242, 254, 0.6);
@@ -25,67 +19,12 @@
   --glow-meta: rgba(0, 164, 255, 0.6);
 }
 
-.marquee-container {
-  /* Removed bg-background-dark/30 to make it transparent */
-  @apply relative flex overflow-hidden py-12;  
-  /* Soft fade on edges using mask-image */
-  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-}
-
-
-.logo-marquee-item {
-  @apply h-16 md:h-20 w-auto opacity-50 brightness-0 invert transition-all duration-500 
-         cursor-pointer hover:brightness-100 hover:invert-0 hover:opacity-100;
-}
-
-/* Neon Corner Glow */
-.corner-glow {
-  @apply absolute -top-24 -left-24 w-[600px] h-[600px] rounded-full pointer-events-none;
-  background: radial-gradient(circle at center, rgba(0, 210, 255, 0.15) 0%, transparent 70%);
-  filter: blur(80px);
-  z-index: 0;
-}
-
-/* Ensure the hero section is relative to contain the glow */
-.hero-section {
-  @apply relative overflow-hidden;
-}
-
-.silver-text {
-  /* This uses a light metallic gray/silver hex */
-  color: #cbd5e1 !important; 
-}
-
 @reference "../../../styles.css";
-
-.cyber-glow {
-    text-shadow: 0 0 10px rgba(0, 242, 255, 0.5), 0 0 20px rgba(0, 242, 255, 0.2);
-}
-
-.neon-border-glow {
-    box-shadow: 0 0 15px rgba(0, 242, 255, 0.3), inset 0 0 15px rgba(0, 242, 255, 0.1);
-}
 
 .glass-card {
     @apply bg-white/[0.03] backdrop-blur-xl border border-white/10;
 }
 
-
-.streak {
-    @apply absolute w-[2px] h-[100px] opacity-20 pointer-events-none;
-    background: linear-gradient(to bottom, transparent, #00f2ff, transparent);
-    animation: move-down 10s linear infinite;
-}
-
-@keyframes move-down {
-    0% { transform: translateY(-100vh); }
-    100% { transform: translateY(100vh); }
-}
-
-.text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
-}
 
 @reference "../../../styles.css";
 
@@ -149,74 +88,6 @@
   background: linear-gradient(135deg, #00f2c3, #00d2ff);
   border: none;
   color: white; /* Ensures text is readable against the bright gradient */
-}
-
-/* Ensure the background image is removed when the parent is hovered */
-.group:hover .gradient-btn {
-  background-image: none !important;
-  
-}
-
-/* The Card Base */
-.product-card {
-  background: rgba(255, 255, 255, 0.05); /* Standard glass effect */
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  position: relative;
-  z-index: 1;
-}
-
-/* Hover Gradient Layer */
-.product-card::after {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: linear-gradient(135deg, #03cba3, #08bae2);
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-  z-index: -1; /* Keeps content on top */
-}
-
-.product-card:hover::after {
-  opacity: 1;
-}
-
-/* Force all text elements to black on card hover */
-.product-card:hover p, 
-.product-card:hover h3, 
-.product-card:hover span {
-  color: #000000 !important;
-  text-shadow: none !important; /* Removes the blue glow on hover */
-}
-
-/* Specific override for the 'Liteclerk' uppercase text */
-.product-card:hover .text-glow-blue {
-  color: #000000 !important;
-}
-
-/* Ensure the button text remains white for contrast against its black background */
-.product-card:hover .gradient-btn {
-  background: #000000 !important;
-  color: #ffffff !important;
-}
-
-/* Original Style logic */
-.logo-style {
-  height: 4rem; 
-  width: auto;
-  filter: grayscale(100%) brightness(1.5) opacity(0.5);
-  transition: all 0.5s ease;
-  cursor: pointer;
-}
-
-.logo-style:hover {
-  filter: grayscale(0%) brightness(1) opacity(1);
-  transform: scale(1.1); /* Added subtle pop */
-}
-
-.icons-style {
-  /* This restores original colors and adds your glow */
-  filter: grayscale(0%) brightness(1) opacity(1) drop-shadow(0 0 20px rgba(0, 255, 156, 0.6));
 }
 
 
