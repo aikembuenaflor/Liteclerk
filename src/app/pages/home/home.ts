@@ -4,13 +4,14 @@ import { RouterModule } from '@angular/router';
 import { SecondsectionComponent } from './secondsection/secondsection.component';
 import { Cta } from "../../components/cta/cta";
 import { Why } from "../../components/why/why";
+import { ContactForm } from '../../components/contact-form/contact-form';
 
 
 @Component({
   selector: 'app-home',
   standalone: true,
   // Add the BackgroundComponent to the imports array here:
-  imports: [CommonModule, RouterModule, SecondsectionComponent, Cta, Why], 
+  imports: [CommonModule, RouterModule, SecondsectionComponent, Cta, Why, ContactForm], 
   templateUrl: './home.html', 
   styleUrls: ['./home.css']
 })
