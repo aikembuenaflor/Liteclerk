@@ -3,3 +3,9 @@
     /* Adding a basic declaration to satisfy the linter */
     min-height: 0; 
 }
+
+@reference "../../../../styles.css"; 
+
+.text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
+}

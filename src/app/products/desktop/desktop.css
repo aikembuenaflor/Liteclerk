@@ -6,10 +6,9 @@
   --glow-secondary: rgba(0, 255, 156, 0.6);
 }
 
-/* Base Layout Spacing */
 .desktop-wrapper {
-  /* Removed 'overflow-hidden' so content can bleed out */
-  @apply min-h-screen bg-[#0a0a0a] text-white pt-24 pb-12 px-8 lg:px-16 relative overflow-visible mx-auto;
+  /* overflow-x: hidden is the critical fix for horizontal scrolling */
+  @apply bg-[#0a0a0a] text-white pt-24 pb-12 px-8 lg:px-16 relative overflow-x-hidden mx-auto;
 }
 
 /* Typography & Effects */
