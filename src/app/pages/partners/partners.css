@@ -1,110 +1,73 @@
 @reference "../../../styles.css";
 
+/* 1. Prevent Horizontal Scroll & Screen Fitting */
 :host {
-  display: block;
   --primary: #00f2c3;
   --accent-blue: #00d2ff;
+  --secondary: #00d2ff;
+  
+  display: block;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden; /* Stops sudden horizontal scrolling */
 }
 
-/* Base Wrapper fitting to screen */
-.desktop-wrapper {
-  @apply min-h-screen text-white overflow-hidden relative mx-auto;
+/* 2. Indicators & Dots */
+.active-dot {
+  /* Use !important (@apply !) to override default background-color if needed */
+  @apply h-2.5 w-8 rounded-full transition-all duration-300;
+  background: linear-gradient(90deg, #00f2c3 0%, #00d2ff 100%) !important;
+  box-shadow: 0 0 12px rgba(0, 242, 195, 0.4);
 }
 
-.content-layer {
-  @apply max-w-7xl mx-auto w-full relative z-10;
+/* 3. Text & Gradients */
+.cyber-gradient-text {
+  background: linear-gradient(90deg, var(--primary) 0%, var(--accent-blue) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
 }
 
-/* Unified Branding Gradients */
-.text-gradient, .cyber-gradient-text, .text-gradient-blue-green {
-  @apply bg-clip-text text-transparent;
-  background-image: linear-gradient(90deg, var(--primary) 0%, var(--accent-blue) 100%);
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
 }
 
-/* Logo Wall Enhancement */
-.logo-tile {
-  @apply grayscale opacity-40 transition-all duration-500 hover:grayscale-0 hover:opacity-100;
+/* 4. Buttons & Interactions */
+.neon-btn {
+  @apply bg-gradient-to-r from-primary to-secondary text-slate-900 font-bold px-8 py-4 rounded-full 
+         transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer;
+  display: inline-block;
 }
 
-
-
-/* Cyber Glow for secondary tags */
-.cyber-glow {
-  text-shadow: 0 0 8px rgba(0, 242, 195, 0.4);
+.neon-btn:hover {
+  box-shadow: 0 0 25px rgba(0, 242, 195, 0.6);
 }
-
-/* Animation for the Action Gallery */
-.floating-anim {
-  animation: floating 6s ease-in-out infinite;
-}
-
-@keyframes floating {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-15px); }
-}
-
-/* Animated Streak logic */
-.streak {
-  @apply absolute w-[1px] h-[100px] opacity-20 pointer-events-none;
-  background: linear-gradient(to bottom, transparent, var(--primary), transparent);
-  animation: move-down 10s linear infinite;
-}
-
-@keyframes move-down {
-  0% { transform: translateY(-100vh); }
-  100% { transform: translateY(100vh); }
-}
-
-/* Update your CSS file with these specific fixes */
 
 .glass-card {
-  @apply transition-all duration-500 ease-out;
-  /* Ensure the card has a clear boundary for the transform */
-  will-change: transform; 
+  @apply transition-all duration-500 ease-out border border-white/5 bg-white/5;
+  will-change: transform;
 }
 
 .glass-card:hover {
-  /* This lift needs space above, provided by 'pt-12' in the HTML */
-  transform: translateY(-12px); 
+  transform: translateY(-15px) scale(1.02);
   @apply border-primary/40;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 25px 50px -12px rgba(0, 242, 195, 0.25);
 }
 
-/* Ensure parents don't clip the 'In Action' section */
-section, .desktop-wrapper {
-    overflow-x: clip; /* clips horizontal but allows vertical overflow for hover */
+/* 5. Utility Styles */
+.cyber-glow {
+  box-shadow: 0 0 15px rgba(0, 242, 195, 0.2);
 }
 
-/* Container for the slider */
-#action-slider {
-    display: flex;
-    overflow-x: auto;
-    /* Remove any 'no-scrollbar' class if you have it in HTML */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
 
-/* 1. The Scrollbar Height */
-#action-slider::-webkit-scrollbar {
-    height: 4px; /* Thin and minimalist */
-}
-
-/* 2. The Track: This restricts the length of the bar */
-#action-slider::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 20px;
-    /* KEY: These margins force the scrollbar to be very short and centered */
-    margin-left: 40%; 
-    margin-right: 40%;
-}
-
-/* 3. The Gradient Thumb: The moving piece */
-#action-slider::-webkit-scrollbar-thumb {
-    background: linear-gradient(to right, #00f2c3, #00d2ff);
-    border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0, 242, 195, 0.3);
-}
-
-/* Hover state */
-#action-slider::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(to right, #00ff9c, #00f2ff);
-    box-shadow: 0 0 15px rgba(0, 242, 195, 0.5);
+/* Reset for width safety */
+* {
+  box-sizing: border-box;
 }
